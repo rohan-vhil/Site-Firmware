@@ -1,0 +1,11 @@
+{
+    "growwatt" : {
+        "holding" : {
+            "start" : 3000,
+
+        }
+        "reg_list" : {
+            
+        }
+    }
+}

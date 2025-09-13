@@ -1,0 +1,8 @@
+[Unit]
+Description=server
+
+[Service]
+ExecStart=/home/edge_device/edge_device/bin/python3 /home/edge_device/edge_device/webpage/server.py
+
+[Install]
+WantedBy=multi-user.target

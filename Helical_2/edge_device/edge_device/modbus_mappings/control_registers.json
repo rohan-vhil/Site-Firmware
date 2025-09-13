@@ -1,0 +1,62 @@
+{
+    "SG125CX": {
+        "block1": {
+            "registers": "hr",
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "start_address": 5000,
+            "Length": 10,
+            "data": {
+                "power_limit_en": {
+                    "size": 1,
+                    "offset": 6,
+                    "format": "add_16bit_uint",
+                    "switch_register": "NA",
+                    "s_f": "NA",
+                    "m_f": "NA"
+                },
+                "power_limit_pct": {
+                    "size": 1,
+                    "offset": 7,
+                    "format": "add_16bit_uint",
+                    "switch_register": "power_limit_en",
+                    "s_f": "NA",
+                    "m_f": 0.1
+                }
+            }
+        }
+    },
+    "SG125CX-P2": {
+        "block1": {
+            "registers": "hr",
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "start_address": 5000,
+            "Length": 10,
+            "data": {
+                "power_limit_en": {
+                    "size": 1,
+                    "offset": 6,
+                    "format": "add_16bit_uint",
+                    "switch_register": "NA",
+                    "s_f": "NA",
+                    "m_f": "NA"
+                },
+                "power_limit_pct": {
+                    "size": 1,
+                    "offset": 7,
+                    "format": "add_16bit_uint",
+                    "switch_register": "power_limit_en",
+                    "s_f": "NA",
+                    "m_f": 0.1
+                }
+            }
+        }
+    },
+    "EM6400NG": {},
+    "EMG6436H": {},
+    "EM6400NG-P2": {},
+    "EM6400NG-P3": {},
+    "EM6400NG-P4": {},
+    "WMS": {}
+}

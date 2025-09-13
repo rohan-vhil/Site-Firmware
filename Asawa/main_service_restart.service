@@ -1,0 +1,6 @@
+[Unit]
+Description=Restart the run_main
+
+[Service]
+Type=oneshot
+ExecStart=/bin/systemctl restart run_main.service

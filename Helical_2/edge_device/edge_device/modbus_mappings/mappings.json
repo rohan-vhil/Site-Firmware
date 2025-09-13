@@ -1,0 +1,200 @@
+{
+    "SG125CX": {
+        "block1": {
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "registers": "ir",
+            "start_address": 5000,
+            "Length": 50,
+            "data": {
+                "total_power": {
+                    "size": 2,
+                    "offset": 30,
+                    "format": "decode_32bit_uint",
+                    "s_f": "NA",
+                    "m_f": "NA"
+                },
+                "total_energy": {
+                    "size": 2,
+                    "offset": 3,
+                    "format": "decode_32bit_uint",
+                    "s_f": "NA",
+                    "m_f": "NA"
+                }
+            }
+        }
+    },
+    "SG125CX-P2": {
+        "block1": {
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "registers": "ir",
+            "start_address": 5000,
+            "Length": 100,
+            "data": {
+                "L1_voltage": {
+                    "size": 1,
+                    "offset": 18,
+                    "format": "decode_16bit_uint",
+                    "s_f": "NA",
+                    "m_f": 0.1
+                },
+                "L2_voltage": {
+                    "size": 1,
+                    "offset": 19,
+                    "format": "decode_16bit_uint",
+                    "s_f": "NA",
+                    "m_f": 0.1
+                },
+                "L3_voltage": {
+                    "size": 1,
+                    "offset": 20,
+                    "format": "decode_16bit_uint",
+                    "s_f": "NA",
+                    "m_f": 0.1
+                },
+                "acfreq": {
+                    "size": 1,
+                    "offset": 35,
+                    "format": "decode_16bit_uint",
+                    "s_f": "NA",
+                    "m_f": 0.1
+                },
+
+                "total_power": {
+                    "size": 2,
+                    "offset": 30,
+                    "format": "decode_32bit_uint",
+                    "s_f": "NA",
+                    "m_f": "NA"
+                },
+                "total_energy": {
+                    "size": 2,
+                    "offset": 3,
+                    "format": "decode_32bit_uint",
+                    "s_f": "NA",
+                    "m_f": "NA"
+                }
+            }
+        }
+    },
+    "EM6400NG":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "registers": "hr",
+            "start_address": 2999,
+            "Length": 70,
+            "data":{
+                "total_power":{
+                    "size":2,
+                    "offset":59,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":1000
+                }
+            }
+        }
+    },
+    "EM6400NG-P2":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "registers": "hr",
+            "start_address": 2999,
+            "Length": 70,
+            "data":{
+                "total_power":{
+                    "size":2,
+                    "offset":59,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":1
+                }
+            }
+        }
+    },
+    "EM6400NG-P3":{
+        "block1":{
+            "byteorder": "LITTLE",
+            "wordorder": "BIG",
+            "registers": "hr",
+            "start_address": 2999,
+            "Length": 70,
+            "data":{
+                "total_power":{
+                    "size":2,
+                    "offset":59,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":1
+                }
+            }
+        }
+    },
+    "EM6400NG-P4":{
+        "block1":{
+            "byteorder": "LITTLE",
+            "wordorder": "LITTLE",
+            "registers": "hr",
+            "start_address": 2999,
+            "Length": 70,
+            "data":{
+                "total_power":{
+                    "size":2,
+                    "offset":59,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":1
+                }
+            }
+        }
+    },
+    "WMS":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "registers": "hr",
+            "start_address": 100,
+            "Length": 16,
+            "data":{
+                "irradiance":{
+                    "size":2,
+                    "offset":0,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "ambient_temperature":{
+                    "size":2,
+                    "offset":2,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "module_temperature":{
+                    "size":2,
+                    "offset":4,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "internal_ambient_temperature":{
+                    "size":2,
+                    "offset":6,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "internal_module_temperature":{
+                    "size":2,
+                    "offset":8,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                }
+            }
+        }
+    }
+
+}

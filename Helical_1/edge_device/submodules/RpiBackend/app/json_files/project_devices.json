@@ -1,0 +1,74 @@
+[
+  {
+    "project_code": "helical",
+    "client_code": "helical",
+    "device_id": "solar-inverter:sunbird3000_inverter:123abc",
+    "device_type": "solar-inverter",
+    "device_brand": "fuji",
+    "device_model_no": "sunbird3000_inverter",
+    "device_serial_no": "123abc"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "helical",
+    "device_id": "grid:sunbird3000_grid:123abc",
+    "device_type": "grid",
+    "device_brand": "fuji",
+    "device_model_no": "sunbird3000_grid",
+    "device_serial_no": "123abc"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "helical",
+    "device_id": "load:sunbird3000_load:123abc",
+    "device_type": "load",
+    "device_brand": "fuji",
+    "device_model_no": "sunbird3000_load",
+    "device_serial_no": "123abc"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "helical",
+    "device_id": "battery:GCE_BMS:123abc",
+    "device_type": "battery",
+    "device_brand": "GCE_BMS",
+    "device_model_no": "GCE_BMS",
+    "device_serial_no": "123abc"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "variate",
+    "device_id": "solar-inverter:sunbird3000_inverter:123abc",
+    "device_type": "solar-inverter",
+    "device_brand": "fuji",
+    "device_model_no": "sunbird3000_inverter",
+    "device_serial_no": "123abc"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "variate",
+    "device_id": "grid:sunbird3000_grid:123abc",
+    "device_type": "grid",
+    "device_brand": "fuji",
+    "device_model_no": "sunbird3000_grid",
+    "device_serial_no": "123abc"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "variate",
+    "device_id": "load:sunbird3000_load:123abc",
+    "device_type": "load",
+    "device_brand": "fuji",
+    "device_model_no": "sunbird3000_load",
+    "device_serial_no": "123abc"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "variate",
+    "device_id": "battery:GCE_BMS:123abc",
+    "device_type": "battery",
+    "device_brand": "GCE_BMS",
+    "device_model_no": "GCE_BMS",
+    "device_serial_no": "123abc"
+  }
+]

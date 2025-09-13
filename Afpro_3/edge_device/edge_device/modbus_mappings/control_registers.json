@@ -1,0 +1,23 @@
+{
+    "MAC_60KTL":{
+        "block1":{
+            "registers":"hr",
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "start_address": 3,
+            "Length" : 3,
+            "data": {
+                "power_limit_pct": {
+                    "size": 1,
+                    "offset": 0,
+                    "format": "add_16bit_uint",
+                    "switch_register": "NA",
+                    "s_f": "NA",
+                    "m_f": "NA"
+                }
+            }
+        }
+    },
+    "EM6436H": {},
+    "MAC_100KTL": {}
+}

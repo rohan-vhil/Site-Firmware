@@ -1,0 +1,43 @@
+1. device_id : solar-inverter:Solis-255K-EHV-5G-PLUS:1822060242250044
+   brand : Solis
+   capacity : 255KW
+   Model No : Solis-255K-EHV-5G-PLUS
+   serial No : 1822060242250044
+
+2. device_id : solar-inverter:Solis-255K-EHV-5G-PLUS:1822060242250093
+   brand : Solis
+   capacity : 255KW
+   Model No : Solis-255K-EHV-5G-PLUS
+   serial No : 1822060242250093
+
+3. device_id : solar-inverter:Solis-255K-EHV-5G-PLUS:1822060242250109
+   brand : Solis
+   capacity : 255KW
+   Model No : Solis-255K-EHV-5G-PLUS
+   serial No : 1822060242250109
+
+4. device_id : solar-inverter:Solis-255K-EHV-5G-PLUS:1822060242250119
+   brand : Solis
+   capacity : 255KW
+   Model No : Solis-255K-EHV-5G-PLUS
+   serial No : 1822060242250119
+
+5. device_id : HT:Elite_440:X2359408
+   brand : Secure
+   device_type : HT
+   Model No : Elite_440
+   serial No : X2359408
+
+6. device_id : ACDB:LG_6435P:HCE5698850
+   brand : Elmeasure
+   device_type : ACDB
+   Model No : LG_6435P
+   serial No : HCE5698850
+
+7. device_id : wms:webdyn:2412843
+   brand : Webdyn
+   device_type : wms
+   Model No : webdyn
+   serial No : 2412843
+
+

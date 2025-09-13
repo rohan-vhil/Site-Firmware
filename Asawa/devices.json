@@ -1,0 +1,57 @@
+[
+    {
+        "device_type":"solar-inverter",
+        "device_brand":"delta",
+        "part_num":"M70A",
+        "device_id":"solar-inverter:M70A:123abc",
+        "device_serial_no":"123abc",
+        "comm_type": "modbus-rtu",
+        "num_phases":"3",
+        "phases":"1,2,3",
+        "modbus_rtu_details":{  
+            "part_num":"M70A",
+            "port":"/dev/ttyUSB1",
+            "stop_bits":"1",
+            "parity":"N",
+            "baudrate":"9600",
+            "slave_id":"1"
+        }   
+    },
+    {
+        "device_type":"solar-inverter",
+        "device_brand":"growatt",
+        "part_num":"MAC_100KTL",
+        "device_id":"solar-inverter:MAC_100KTL:EGKME1Q00Y",
+        "device_serial_no":"EGKME1Q00Y",
+        "comm_type": "modbus-rtu",
+        "rated_power": "100000",
+        "num_phases":"3",
+        "phases":"1,2,3",
+        "modbus_rtu_details":{  
+            "part_num":"MAC_100KTL",
+            "port":"/dev/ttyUSB0",
+            "stop_bits":"1",
+            "parity":"N",
+            "baudrate":"9600",
+            "slave_id":"1"
+        }
+    },
+    {
+        "device_type":"solar-inverter",
+        "device_brand":"delta",
+        "part_num":"M30A",
+        "device_id":"solar-inverter:M30A:123xyz",
+        "device_serial_no":"123xyz",
+        "comm_type": "modbus-rtu",
+        "num_phases":"3",
+        "phases":"1,2,3",
+        "modbus_rtu_details":{  
+            "part_num":"M30A",
+            "port":"/dev/ttyUSB1",
+            "stop_bits":"1",
+            "parity":"N",
+            "baudrate":"9600",
+            "slave_id":"3"
+        }   
+    }
+]

@@ -1,0 +1,412 @@
+{
+    "SG33KTL-M": {
+        "Fault": {
+            "0": {
+                "message": "Noerror",
+                "severity": "Info"
+            },
+            "2": {
+                "message": "GridOvervoltage",
+                "severity": "High"
+            },
+            "3": {
+                "message": "Short term grid overvoltage",
+                "severity": "High"
+            }
+        },
+        "device_state": {
+            "type": "code",
+            "codes": {
+                "0": {
+                    "message": "run",
+                    "severity": "Info"
+                },
+                "2176": {
+                    "message": "Fault",
+                    "severity": "High"
+                },
+                "37120": {
+                    "message": "Alarm",
+                    "severity": "Warning"
+                }
+            }
+        }
+    },
+    "Pro EM-50": {},
+    "SMA_storage": {},
+    "solar_edge1": {
+        "Fault": {
+            "type": "bitfield",
+            "codes": {
+                "0": {
+                    "message": "ground fault",
+                    "severity": "High"
+                },
+                "1": {
+                    "message": "DC over voltage",
+                    "severity": "High"
+                },
+                "2": {
+                    "message": "AC disconnecct",
+                    "severity": "High"
+                },
+                "3": {
+                    "message": "DC ddisconnect",
+                    "severity": "High"
+                }
+            }
+        },
+        "device_state": {
+            "1": {
+                "message": "off",
+                "severity": "Info"
+            },
+            "2": {
+                "message": "sleeping",
+                "severity": "Info"
+            },
+            "3": {
+                "message": "starting",
+                "severity": "Info"
+            },
+            "4": {
+                "message": "mppt",
+                "severity": "Info"
+            },
+            "5": {
+                "message": "throttled",
+                "severity": "Warning"
+            },
+            "6": {
+                "message": "shutting down",
+                "severity": "Warning"
+            },
+            "7": {
+                "message": "fault",
+                "severity": "High"
+            },
+            "8": {
+                "message": "standby",
+                "severity": "Info"
+            }
+        }
+    },
+    "fronius_primo": {
+        "Fault": {
+            "type": "bitfield",
+            "codes": {
+                "0": {
+                    "message": "ground fault",
+                    "severity": "High"
+                },
+                "1": {
+                    "message": "DC over voltage",
+                    "severity": "High"
+                },
+                "2": {
+                    "message": "AC disconnecct",
+                    "severity": "High"
+                },
+                "3": {
+                    "message": "DC ddisconnect",
+                    "severity": "High"
+                }
+            }
+        },
+        "device_state": {
+            "1": {
+                "message": "off",
+                "severity": "Info"
+            },
+            "2": {
+                "message": "sleeping",
+                "severity": "Info"
+            },
+            "3": {
+                "message": "starting",
+                "severity": "Info"
+            },
+            "4": {
+                "message": "mppt",
+                "severity": "Info"
+            },
+            "5": {
+                "message": "throttled",
+                "severity": "Warning"
+            },
+            "6": {
+                "message": "shutting down",
+                "severity": "Warning"
+            },
+            "7": {
+                "message": "fault",
+                "severity": "High"
+            },
+            "8": {
+                "message": "standby",
+                "severity": "Info"
+            }
+        }
+    },
+    "solar_edge": {
+        "Fault": {
+            "type": "bitfield",
+            "codes": {
+                "0": {
+                    "message": "ground fault",
+                    "severity": "High"
+                },
+                "1": {
+                    "message": "DC over voltage",
+                    "severity": "High"
+                },
+                "2": {
+                    "message": "AC disconnecct",
+                    "severity": "High"
+                },
+                "3": {
+                    "message": "DC ddisconnect",
+                    "severity": "High"
+                }
+            }
+        },
+        "device_state": {
+            "0": {
+                "message": "run",
+                "severity": "Info"
+            },
+            "2176": {
+                "message": "Fault",
+                "severity": "High"
+            },
+            "37120": {
+                "message": "Alarm",
+                "severity": "Warning"
+            }
+        }
+    },
+    "solar_edge2": {
+        "Fault": {
+            "type": "bitfield",
+            "codes": {
+                "0": {
+                    "message": "GROUND_FAULT",
+                    "severity": "High"
+                },
+                "1": {
+                    "message": "DC_OVER_VOLT",
+                    "severity": "High"
+                },
+                "2": {
+                    "message": "AC_DISCONNECT",
+                    "severity": "High"
+                },
+                "3": {
+                    "message": "DC_DISCONNECT",
+                    "severity": "High"
+                },
+                "4": {
+                    "message": "GRID_DISCONNECT",
+                    "severity": "High"
+                },
+                "5": {
+                    "message": "CABINET_OPEN",
+                    "severity": "Warning"
+                },
+                "6": {
+                    "message": "MANUAL_SHUTDOWN",
+                    "severity": "Warning"
+                },
+                "7": {
+                    "message": "OVER_TEMP",
+                    "severity": "High"
+                },
+                "8": {
+                    "message": "OVER_FREQUENCY",
+                    "severity": "High"
+                },
+                "9": {
+                    "message": "UNDER_FREQUENCY",
+                    "severity": "High"
+                },
+                "10": {
+                    "message": "AC_OVER_VOLT",
+                    "severity": "High"
+                },
+                "11": {
+                    "message": "AC_UNDER_VOLT",
+                    "severity": "High"
+                },
+                "12": {
+                    "message": "BLOWN_STRING_FUSE",
+                    "severity": "High"
+                },
+                "13": {
+                    "message": "UNDER_TEMP",
+                    "severity": "Warning"
+                },
+                "14": {
+                    "message": "MEMORY_LOSS",
+                    "severity": "High"
+                },
+                "15": {
+                    "message": "HW_TEST_FAILURE",
+                    "severity": "High"
+                }
+            }
+        },
+        "device_state": {
+            "type": "bitfield",
+            "codes": {
+                "1": {
+                    "message": "OFF",
+                    "severity": "Info"
+                },
+                "5": {
+                    "message": "THROTTLED",
+                    "severity": "Warning"
+                },
+                "6": {
+                    "message": "SHUTTING_DOWN",
+                    "severity": "Warning"
+                },
+                "7": {
+                    "message": "FAULT",
+                    "severity": "High"
+                },
+                "8": {
+                    "message": "STANDBY",
+                    "severity": "Info"
+                }
+            }
+        }
+    },
+    "growatt": {
+        "fault": {
+            "codes": {
+                "240": {
+                    "message": "Auto Test Failed",
+                    "severity": "High"
+                },
+                "250": {
+                    "message": "No AC Connection",
+                    "severity": "High"
+                },
+                "260": {
+                    "message": "PV Isolation Low",
+                    "severity": "High"
+                },
+                "270": {
+                    "message": "Residual Current High",
+                    "severity": "High"
+                },
+                "280": {
+                    "message": "Output High DCI",
+                    "severity": "High"
+                },
+                "290": {
+                    "message": "PV Voltage High",
+                    "severity": "High"
+                },
+                "300": {
+                    "message": "AC V Outrange",
+                    "severity": "High"
+                },
+                "310": {
+                    "message": "AC F Outrange",
+                    "severity": "High"
+                },
+                "320": {
+                    "message": "Module Hot",
+                    "severity": "High"
+                }
+            }
+        }
+    },
+    "polycab": {},
+    "GCE_BMS": {
+        "device_state": {
+            "17": {
+                "message": "Charge",
+                "severity": "Info"
+            },
+            "34": {
+                "message": "Discharge",
+                "severity": "Info"
+            },
+            "51": {
+                "message": "Stand Still",
+                "severity": "Info"
+            }
+        },
+        "Fault": {
+            "type": "bitfield",
+            "codes": {
+                "0": {
+                    "message": "Total Voltage High",
+                    "severity": "High"
+                },
+                "1": {
+                    "message": "Total Voltage Low",
+                    "severity": "High"
+                },
+                "2": {
+                    "message": "Charging Overcurrent",
+                    "severity": "High"
+                },
+                "3": {
+                    "message": "Discharge Overcurrent",
+                    "severity": "High"
+                },
+                "4": {
+                    "message": "Charging High Temperature",
+                    "severity": "High"
+                },
+                "5": {
+                    "message": "Charging Low Temperature",
+                    "severity": "Warning"
+                },
+                "6": {
+                    "message": "BMU Communication Failure",
+                    "severity": "High"
+                },
+                "7": {
+                    "message": "RFU",
+                    "severity": "Info"
+                },
+                "8": {
+                    "message": "Unbalanced Temperature",
+                    "severity": "Warning"
+                },
+                "9": {
+                    "message": "Cell Imbalance",
+                    "severity": "Warning"
+                },
+                "10": {
+                    "message": "SOC Too Low",
+                    "severity": "Warning"
+                },
+                "11": {
+                    "message": "Low Insulation Rating",
+                    "severity": "High"
+                },
+                "12": {
+                    "message": "Cell Overvoltage",
+                    "severity": "High"
+                },
+                "13": {
+                    "message": "Cell Undervoltage",
+                    "severity": "High"
+                },
+                "14": {
+                    "message": "Discharge Temperature Too High",
+                    "severity": "High"
+                },
+                "15": {
+                    "message": "Discharge Temperature Too Low",
+                    "severity": "Warning"
+                }
+            }
+        }
+    }
+}

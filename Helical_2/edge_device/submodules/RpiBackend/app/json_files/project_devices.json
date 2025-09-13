@@ -1,0 +1,128 @@
+[
+  {
+    "project_code": "helical",
+    "client_code": "helical",
+    "device_id": "solar-inverter:SG125CX:123abc",
+    "device_type": "solar-inverter",
+    "device_brand": "sungrow",
+    "device_model_no": "SG125CX",
+    "device_serial_no": "123abc"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "helical",
+    "device_id": "solar-inverter:SG125CX:123abd",
+    "device_type": "solar-inverter",
+    "device_brand": "sungrow",
+    "device_model_no": "SG125CX",
+    "device_serial_no": "123abd"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "helical",
+    "device_id": "grid:EM6400NG:123mno",
+    "device_type": "grid",
+    "device_brand": "schneider",
+    "device_model_no": "EM6400NG",
+    "device_serial_no": "123mno"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "helical",
+    "device_id": "dg:EM6400NG:123ghi",
+    "device_type": "dg",
+    "device_brand": "schneider",
+    "device_model_no": "EM6400NG",
+    "device_serial_no": "123ghi"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "helical",
+    "device_id": "meter:EM6400NG:123xyz",
+    "device_type": "meter",
+    "device_brand": "schneider",
+    "device_model_no": "EM6400NG",
+    "device_serial_no": "123xyz"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "helical",
+    "device_id": "WMS:WMS:123ijk",
+    "device_type": "WMS",
+    "device_brand": "suryalogix",
+    "device_model_no": "WMS",
+    "device_serial_no": "123ijk"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "helical",
+    "device_id": "dg:EM6400NG:123lmn",
+    "device_type": "dg",
+    "device_brand": "schneider",
+    "device_model_no": "EM6400NG",
+    "device_serial_no": "123lmn"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "variate",
+    "device_id": "solar-inverter:SG125CX:123abc",
+    "device_type": "solar-inverter",
+    "device_brand": "sungrow",
+    "device_model_no": "SG125CX",
+    "device_serial_no": "123abc"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "variate",
+    "device_id": "solar-inverter:SG125CX:123abd",
+    "device_type": "solar-inverter",
+    "device_brand": "sungrow",
+    "device_model_no": "SG125CX",
+    "device_serial_no": "123abd"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "variate",
+    "device_id": "grid:EM6400NG:123mno",
+    "device_type": "grid",
+    "device_brand": "schneider",
+    "device_model_no": "EM6400NG",
+    "device_serial_no": "123mno"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "variate",
+    "device_id": "dg:EM6400NG:123ghi",
+    "device_type": "dg",
+    "device_brand": "schneider",
+    "device_model_no": "EM6400NG",
+    "device_serial_no": "123ghi"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "variate",
+    "device_id": "meter:EM6400NG:123xyz",
+    "device_type": "meter",
+    "device_brand": "schneider",
+    "device_model_no": "EM6400NG",
+    "device_serial_no": "123xyz"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "variate",
+    "device_id": "WMS:WMS:123ijk",
+    "device_type": "WMS",
+    "device_brand": "suryalogix",
+    "device_model_no": "WMS",
+    "device_serial_no": "123ijk"
+  },
+  {
+    "project_code": "helical",
+    "client_code": "variate",
+    "device_id": "dg:EM6400NG:123lmn",
+    "device_type": "dg",
+    "device_brand": "schneider",
+    "device_model_no": "EM6400NG",
+    "device_serial_no": "123lmn"
+  }
+]

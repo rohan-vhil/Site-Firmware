@@ -1,0 +1,125 @@
+{
+    "installer": "Rohan",
+    "number_of_devices": 6,
+    "VPP ID": 255,
+    "site id": "helical",
+    "timezone":"Asia/Kolkata",
+    "mqtt server": "test.mqtt.org",
+    "device_list": [
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"sungrow",
+            "part_num":"SG125CX",
+            "device_id":"solar-inverter:SG125CX:123abc",
+            "device_serial_no":"123abc",
+            "rated_power":"125000",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"SG125CX",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"1"
+            }   
+        },
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"sungrow",
+            "part_num":"SG125CX",
+            "device_id":"solar-inverter:SG125CX:123abd",
+            "device_serial_no":"123abd",
+            "rated_power":"125000",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{
+                "part_num":"SG125CX",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"2"
+            }
+        },
+        {
+            "device_type":"meter",
+            "device_brand":"schneider",
+            "part_num":"EM6400NG",
+            "connected_to": "grid",
+            "device_id":"grid:EM6400NG:123mno",
+            "device_serial_no":"123mno",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{
+                "part_num":"EM6400NG",
+                "port":"/dev/ttyUSB1",
+                "stop_bits":"1",
+                "parity":"E",
+                "baudrate":"9600",
+                "slave_id":"6"
+            }
+        },
+        {
+            "device_type":"meter",
+            "device_brand":"schneider",
+            "part_num":"EM6400NG",
+            "connected_to": "DG",
+            "device_id":"dg:EM6400NG:123ghi",
+            "device_serial_no":"123ghi",
+            "minumum_limit": "75000",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{
+                "part_num":"EM6400NG",
+                "port":"/dev/ttyUSB1",
+                "stop_bits":"1",
+                "parity":"E",
+                "baudrate":"9600",
+                "slave_id":"7"
+            }
+        },
+        {
+            "device_type":"meter",
+            "device_brand":"schneider",
+            "part_num":"EM6400NG",
+            "connected_to": "DG",
+            "device_id":"dg:EM6400NG:123lmn",
+            "device_serial_no":"123lmn",
+            "minumum_limit": "75000",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{
+                "part_num":"EM6400NG",
+                "port":"/dev/ttyUSB1",
+                "stop_bits":"1",
+                "parity":"E",
+                "baudrate":"9600",
+                "slave_id":"8"
+            }
+        },
+        {
+            "device_type":"meter",
+            "device_brand":"selec",
+            "part_num":"WMS",
+            "device_id":"WMS:WMS:123ijk",
+            "device_serial_no":"123ijk",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{
+                "part_num":"WMS",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"100"
+            }
+        }
+    ]
+}

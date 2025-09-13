@@ -1,0 +1,480 @@
+{
+    "solar_edge":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "registers": "hr",
+            "start_address": 40000,
+            "Length": 120,
+            "data":{
+                "L1_voltage":{
+                    "size":1,
+                    "offset":79,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",   
+                    "m_f":"NA"
+                },
+                "L2_voltage":{
+                    "size":1,
+                    "offset":80,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L3_voltage":{
+                    "size":2,
+                    "offset":81,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L1_current":{
+                    "size":1,
+                    "offset":72,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L2_current":{
+                    "size":2,
+                    "offset":73,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L3_current":{
+                    "size":1,
+                    "offset":74,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "acfreq":{
+                    "size":2,
+                    "offset":85,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                }
+                
+            }
+        }
+    },
+    "EMG6436N":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "registers": "hr",
+            "start_address": 3001,
+            "Length": 120,
+            "data":{
+                "L1_voltage":{
+                    "size":2,
+                    "offset":28,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L2_voltage":{
+                    "size":2,
+                    "offset":30,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L3_voltage":{
+                    "size":2,
+                    "offset":32,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L1_power":{
+                    "size":2,
+                    "offset":54,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L2_power":{
+                    "size":2,
+                    "offset":56,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L3_power":{
+                    "size":2,
+                    "offset":58,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L1_current":{
+                    "size":2,
+                    "offset":0,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L2_current":{
+                    "size":2,
+                    "offset":2,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L3_current":{
+                    "size":2,
+                    "offset":4,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "acfreq":{
+                    "size":2,
+                    "offset":108,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                }
+                
+            }
+        }
+    },
+    "EMG6436H":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "registers": "hr",
+            "start_address": 0,
+            "Length": 120,
+            "data":{
+                "L1_voltage":{
+                    "size":2,
+                    "offset":27,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L2_voltage":{
+                    "size":2,
+                    "offset":29,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L3_voltage":{
+                    "size":2,
+                    "offset":31,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L1_power":{
+                    "size":2,
+                    "offset":53,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L2_power":{
+                    "size":2,
+                    "offset":55,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L3_power":{
+                    "size":2,
+                    "offset":57,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L1_current":{
+                    "size":2,
+                    "offset":0,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L2_current":{
+                    "size":2,
+                    "offset":2,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L3_current":{
+                    "size":2,
+                    "offset":4,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "acfreq":{
+                    "size":2,
+                    "offset":109,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                }
+                
+            }
+        }
+    },
+    "sunbird3000_inverter":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "registers": "hr",
+            "start_address": 17,
+            "Length": 60,
+            "data":{
+                "L1_voltage":{
+                    "size":1,
+                    "offset":0,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L2_voltage":{
+                    "size":1,
+                    "offset":1,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L3_voltage":{
+                    "size":1,
+                    "offset":2,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "total_power":{
+                    "size":1,
+                    "offset":33,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":10
+                },
+                "total_energy":{
+                    "size":2,
+                    "offset":58,
+                    "format":"decode_32bit_int",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "acfreq":{
+                    "size":1,
+                    "offset":22,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.01
+                }
+            }
+        }
+    },
+    "sunbird3000_grid":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "registers": "hr",
+            "start_address": 0,
+            "Length": 69,
+            "data":{
+                "L1_voltage":{
+                    "size":1,
+                    "offset":0,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L2_voltage":{
+                    "size":1,
+                    "offset":1, 
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L3_voltage":{
+                    "size":1,
+                    "offset":2,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "total_power":{
+                    "size":1,
+                    "offset":15,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.01
+                },
+                "acfreq":{
+                    "size":1,
+                    "offset":16,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.01
+                },
+                "import_energy":{
+                    "size":2,
+                    "offset":65,
+                    "format":"decode_32bit_int",
+                    "s_f":"NA",
+                    "m_f":0.01
+                },
+                "export_energy":{
+                    "size":2,
+                    "offset":67,
+                    "format":"decode_32bit_int",
+                    "s_f":"NA",
+                    "m_f":0.01
+                }
+            }
+        }
+        
+    },
+    "sunbird3000_battery":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "registers": "hr",
+            "start_address": 43,
+            "Length": 38,
+            "data":{
+                "voltage":{
+                    "size":1,
+                    "offset":0,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "total_power":{
+                    "size":1,
+                    "offset":2,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "current":{
+                    "size":1,
+                    "offset":1,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "charging_energy":{
+                    "size":2,
+                    "offset":34,
+                    "format":"decode_32bit_int",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "discharging_energy":{
+                    "size":2,
+                    "offset":36,
+                    "format":"decode_32bit_int",
+                    "s_f":"NA",
+                    "m_f":1
+                }
+            }
+        }
+    },
+    "sunbird3000_load":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "registers": "hr",
+            "start_address": 32,
+            "Length": 40,
+            "data":{
+                "L1_power":{
+                    "size":1,
+                    "offset":0,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L2_power":{
+                    "size":1,   
+                    "offset":1,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L3_power":{
+                    "size":1,
+                    "offset":2,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "total_power":{
+                    "size":1,
+                    "offset":6,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":10
+                },
+                "total_energy":{
+                    "size":2,
+                    "offset":39,
+                    "format":"decode_32bit_int",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "acfreq":{
+                    "size":1,
+                    "offset":7,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.01
+                }
+            }
+        }
+    },
+    "GCE_BMS":{
+         "block1":{
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "registers": "hr",
+            "start_address": 4352,
+            "Length": 21,
+            "data":{
+                "device_state":{
+                    "size":1,
+                    "offset":1,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "SoC":{
+                    "size":1,
+                    "offset":7,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "SoH":{
+                    "size":1,
+                    "offset":8,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "Fault":{
+                    "size":1,
+                    "offset":21,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                }
+
+            }
+        }
+    }
+}

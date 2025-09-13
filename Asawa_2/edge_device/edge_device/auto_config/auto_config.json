@@ -1,0 +1,83 @@
+{
+    "modbus": {
+        "growatt" : {
+            
+        },
+        "solar_edge": {
+            "set1":{
+                "base_address": 40004,
+                "manufacturer_info":
+                {
+                    "offset": 0,
+                    "size" : 16
+                }, 
+                "model_info":
+                {
+                    "offset": 16,
+                    "size" : 16
+                },     
+                "holding":
+                {
+                    "40000":"21365",
+                    "40001":"28243"
+                }
+            },
+            "set2":{
+                "base_address": 50004,
+                "manufacturer_info":
+                {
+                    "offset": 0,
+                    "size" : 16
+                }, 
+                "model_info":
+                {
+                    "offset": 16,
+                    "size" : 16
+                }, 
+                "holding":
+                {
+                    "50000":"21365",
+                    "50001":"28243"
+                } 
+            }
+        },
+        "ABBGt30": {
+            "set1":{
+                "base_address": 3654,
+                "manufacturer_info":
+                {
+                    "offset": 0,
+                    "size" : 16
+                }, 
+                "model_info":
+                {
+                    "offset": 16,
+                    "size" : 16
+                }, 
+                "input":{
+                    "3650":"18292",
+                    "3651":"30",
+                    "1019":"80"
+                }
+            },
+            "set2":{
+                "base_address": 3654,
+                "manufacturer_info":
+                {
+                    "offset": 0,
+                    "size" : 16
+                }, 
+                "model_info":
+                {
+                    "offset": 16,
+                    "size" : 16
+                }, 
+                "input":{
+                    "3650":"18292",
+                    "3651":"30",
+                    "1019":"87"
+                }
+            }
+        }
+    }
+}

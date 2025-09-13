@@ -1,0 +1,123 @@
+{
+    "MAC_60KTL":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "registers": "ir",
+            "start_address": 0,
+            "Length": 100,
+            "data":{
+                "total_power":{
+                    "size":2,
+                    "offset":35,
+                    "format":"decode_32bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L1_power":{
+                    "size":2,
+                    "offset":40,
+                    "format":"decode_32bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L2_power":{
+                    "size":2,
+                    "offset":44,
+                    "format":"decode_32bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L3_power":{
+                    "size":2,
+                    "offset":48,
+                    "format":"decode_32bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L1_voltage":{
+                    "size":1,
+                    "offset":38,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L2_voltage":{
+                    "size":1,
+                    "offset":42, 
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L3_voltage":{
+                    "size":1,
+                    "offset":46,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L1_current":{
+                    "size":1,
+                    "offset":39,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L2_current":{
+                    "size":1,
+                    "offset":43,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L3_current":{
+                    "size":1,
+                    "offset":47,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "today_energy":{
+                    "size":2,
+                    "offset":53,
+                    "format":"decode_32bit_uint",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "total_energy":{
+                    "size":2,
+                    "offset":55,
+                    "format":"decode_32bit_uint",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "acfreq":{
+                    "size":1,
+                    "offset":37,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.01
+                }
+            }
+        }
+    },
+    "EM6436H":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "registers": "hr",
+            "start_address": 2999,
+            "Length": 100,
+            "data":{
+                "total_power":{
+                    "size":2,
+                    "offset":3059,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":1000
+                }
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+{
+    "installer": "Rohan",
+    "number_of_devices": 5,
+    "VPP ID": 255,
+    "site id": "devesh_electricals",
+    "timezone":"Asia/Kolkata",
+    "mqtt server": "test.mqtt.org",
+    "device_list": [
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"solis",
+            "part_num":"solis",
+            "device_id":"solar-inverter:Solis-255K-EHV-5G-PLUS:1822060242250044",
+            "device_serial_no":"1822060242250044",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"solis",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"4"
+            }   
+        },
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"solis",
+            "part_num":"solis",
+            "device_id":"solar-inverter:Solis-255K-EHV-5G-PLUS:1822060242250093",
+            "device_serial_no":"1822060242250093",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"solis",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"2"
+            }   
+        },
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"solis",
+            "part_num":"solis",
+            "device_id":"solar-inverter:Solis-255K-EHV-5G-PLUS:1822060242250109",
+            "device_serial_no":"1822060242250109",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"solis",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"3"
+            }   
+        },
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"solis",
+            "part_num":"solis",
+            "device_id":"solar-inverter:Solis-255K-EHV-5G-PLUS:1822060242250119",
+            "device_serial_no":"1822060242250119",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"solis",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"1"
+            }   
+        },
+        {
+            "device_type":"meter",
+            "device_brand":"webdyn",
+            "part_num":"wms",
+            "device_id":"wms:webdyn:2412843",
+            "device_serial_no":"2412843",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"wms",
+                "port":"/dev/ttyUSB1",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"1"
+            }   
+        }
+    ]
+}

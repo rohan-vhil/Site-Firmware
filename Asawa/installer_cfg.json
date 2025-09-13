@@ -1,0 +1,102 @@
+{
+    "installer": "Rohan",
+    "number_of_devices": 4,
+    "VPP ID": 255,
+    "site id": "Aasava",
+    "timezone":"Asia/Kolkata",
+    "mqtt server": "test.mqtt.org",
+    "device_list": [
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"delta",
+            "part_num":"M70A",
+            "device_id":"solar-inverter:M70A:RP703M260000",
+            "device_serial_no":"RP703M260000",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"M70A",
+                "port":"/dev/ttyUSB1",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"1"
+            }   
+        },
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"growatt",
+            "part_num":"MAC_100KTL",
+            "device_id":"solar-inverter:MAC_100KTL:EGKME1Q00Y",
+            "device_serial_no":"EGKME1Q00Y",
+            "comm_type": "modbus-rtu",
+            "rated_power": "100000",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"MAC_100KTL",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"1"
+            }   
+        },
+        {
+            "device_type":"meter",
+            "device_brand":"selec",
+            "part_num":"MFM384",
+            "device_id":"load:MFM384:420217751",
+            "device_serial_no":"420217381",
+            "comm_type": "modbus-rtu",
+            "connected_to": "load",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"MFM376",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"5"
+            }   
+        },
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"delta",
+            "part_num":"M30A",
+            "device_id":"solar-inverter:M30A:RPI303FA0E1100",
+            "device_serial_no":"RPI303FA0E1100",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"M30A",
+                "port":"/dev/ttyUSB1",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"3"
+            }   
+        },
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"delta",
+            "part_num":"M70A",
+            "device_id":"solar-inverter:M70A:08X20B04827WM",
+            "device_serial_no":"RP703M260000",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"M70A",
+                "port":"/dev/ttyUSB1",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"1"
+            }   
+        }
+    ]
+}

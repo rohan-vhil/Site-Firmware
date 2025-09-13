@@ -1,0 +1,46 @@
+{
+    "installer": "Rohan",
+    "number_of_devices": 2,
+    "VPP ID": 255,
+    "site id": "jai_baba",
+    "timezone":"Asia/Kolkata",
+    "mqtt server": "test.mqtt.org",
+    "device_list": [
+        {
+            "device_type":"meter",
+            "device_brand":"webdyn",
+            "part_num":"MFM376",
+            "device_id":"load:MFM376:78948",
+            "device_serial_no":"2412843",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"MFM376",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"1"
+            }   
+        },
+        {
+            "device_type":"meter",
+            "device_brand":"webdyn",
+            "part_num":"MFM376",
+            "device_id":"load:MFM376:65516",
+            "device_serial_no":"2412843",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"MFM376",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"2"
+            }   
+        }
+    ]
+}

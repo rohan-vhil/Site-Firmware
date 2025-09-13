@@ -1,0 +1,8 @@
+[Unit]
+Description=run_main
+
+[Service]
+ExecStart=/home/edge_device1/edge_device/edge_device/.venv/bin/python3 /home/edge_device1/edge_device/edge_device/main_thread.py
+
+[Install]
+WantedBy=multi-user.target

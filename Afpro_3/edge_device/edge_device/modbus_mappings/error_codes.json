@@ -1,0 +1,116 @@
+{
+    "SG33KTL-M": {
+        "Fault": {
+            "0": "Noerror",
+            "2": "GridOvervoltage",
+            "3": "Short term grid overvoltage"
+        },
+        "device_state": {
+            "type": "code",
+            "codes": {
+                "0": "run",
+                "2176": "Fault",
+                "37120": "Alarm"
+            }
+        }
+    },
+    "Pro EM-50" : {
+        
+    },
+    "SMA_storage" : {
+        
+    },
+    "solar_edge1": {
+        "Fault": {
+            "type": "bitfield",
+            "codes": {
+                "0": "ground fault",
+                "1": "DC over voltage",
+                "2": "AC disconnecct",
+                "3": "DC ddisconnect"
+            }
+        },
+        "device_state": {
+            "1": "off",
+            "2": "sleeping",
+            "3": "starting",
+            "4": "mppt",
+            "5": "throttled",
+            "6": "shutting down",
+            "7": "fault",
+            "8": "standby"
+        }
+    },
+    "fronius_primo": {
+        "Fault": {
+            "type": "bitfield",
+            "codes": {
+                "0": "ground fault",
+                "1": "DC over voltage",
+                "2": "AC disconnecct",
+                "3": "DC ddisconnect"
+            }
+        },
+        "device_state": {
+            "1": "off",
+            "2": "sleeping",
+            "3": "starting",
+            "4": "mppt",
+            "5": "throttled",
+            "6": "shutting down",
+            "7": "fault",
+            "8": "standby"
+        }
+    },
+    "solar_edge": {
+        "Fault": {
+            "type": "bitfield",
+            "codes": {
+                "0": "ground fault",
+                "1": "DC over voltage",
+                "2": "AC disconnecct",
+                "3": "DC ddisconnect"
+            }
+        },
+        "device_state": {
+            "0": "run",
+            "2176": "Fault",
+            "37120": "Alarm"
+        }
+    },
+    "solar_edge2": {
+        "Fault":{
+            "type": "bitfield",
+            "codes": {
+                "0": "GROUND_FAULT",
+                "1": "DC_OVER_VOLT",
+                "2": "AC_DISCONNECT",
+                "3": "DC_DISCONNECT",
+                "4": "GRID_DISCONNECT",
+                "5": "CABINET_OPEN",
+                "6": "MANUAL_SHUTDOWN",
+                "7": "OVER_TEMP",
+                "8": "OVER_FREQUENCY",
+                "9": "UNDER_FREQUENCY",
+                "10": "AC_OVER_VOLT",
+                "11": "AC_UNDER_VOLT",
+                "12": "BLOWN_STRING_FUSE",
+                "13": "UNDER_TEMP",
+                "14": "MEMORY_LOSS",
+                "15": "HW_TEST_FAILURE"
+            }
+            
+        },
+        "device_state":{
+            "type":"bitfield",
+            "codes":{
+                "1": "OFF",
+                "5": "THROTTLED",
+                "6": "SHUTTING_DOWN",
+                "7": "FAULT",
+                "8": "STANDBY"
+            }
+            
+        }
+    }
+}

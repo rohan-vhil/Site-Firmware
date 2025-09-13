@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer to restart main_service every 5 minutes
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=5min
+Unit=main_service_restart.service
+
+[Install]
+WantedBy=timers.target

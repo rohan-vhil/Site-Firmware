@@ -1,0 +1,100 @@
+{
+    "installer": "Rohan",
+    "number_of_devices": 5,
+    "VPP ID": 255,
+    "site id": "helical",
+    "timezone":"Asia/Kolkata",
+    "mqtt server": "test.mqtt.org",
+    "device_list": [
+        {
+            "device_type":"battery",
+            "device_brand":"GCE",
+            "part_num":"GCE_BMS",
+            "device_id":"battery:GCE_BMS:123abc",
+            "device_serial_no":"123abc",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"GCE_BMS",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"1"
+            }   
+        },
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"fuji",
+            "part_num":"sunbird3000_inverter",
+            "device_id":"solar-inverter:sunbird3000_inverter:123abc",
+            "device_serial_no":"123abc",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{
+                "part_num":"sunbird3000_inverter",
+                "port":"/dev/ttyUSB1",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"1"
+            }
+        },
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"fuji",
+            "part_num":"sunbird3000_load",
+            "device_id":"load:sunbird3000_load:123abc",
+            "device_serial_no":"123abc",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{
+                "part_num":"sunbird3000_load",
+                "port":"/dev/ttyUSB1",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"1"
+            }
+        },
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"fuji",
+            "part_num":"sunbird3000_grid",
+            "device_id":"grid:sunbird3000_grid:123abc",
+            "device_serial_no":"123abc",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{
+                "part_num":"sunbird3000_grid",
+                "port":"/dev/ttyUSB1",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"1"
+            }
+        },
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"fuji",
+            "part_num":"sunbird3000_battery",
+            "device_id":"battery:sunbird3000_battery:123abc",
+            "device_serial_no":"123abc",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{
+                "part_num":"sunbird3000_battery",
+                "port":"/dev/ttyUSB1",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"1"
+            }
+        }
+    ]
+}

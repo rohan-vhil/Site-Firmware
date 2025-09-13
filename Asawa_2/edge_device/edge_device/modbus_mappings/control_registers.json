@@ -1,0 +1,277 @@
+{
+    "solar_edge": {
+        "block1": {
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "start_address": 40069,
+            "Length" : 15,
+            "registers" : "hr",
+            "data": {
+                "power_limit": {
+                    "size": 1,
+                    "offset": 15,
+                    "format": "add_16bit_uint",
+                    "switch_register": "NA",
+                    "s_f": "NA",
+                    "m_f": "NA"
+                }
+            }
+        }
+    },
+    "Pro EM-50": {
+        
+    },
+    "UMG104" : {},
+    "MFM376" : {},
+    "MFM384" : {},
+    
+    "SMA_storage": {
+        "block1":{
+            "registers": "hr",
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "start_address": 40250,
+            "Length": 65,
+            "data":{
+                "power_limit":{
+                    "size": 2,
+                    "offset": 24,
+                    "format": "add_32bit_int",
+                    "switch_register": "power_limit_en",
+                    "mode_reg":"limit_mode_sel",
+                    "s_f": "wset_sf",
+                    "m_f": "NA"   
+                },
+                "limit_mode_sel":{
+                    "size": 1,
+                    "offset": 23,
+                    "format": "add_16bit_uint",
+                    "switch_register": "NA",
+                    "s_f": "NA",
+                    "m_f": "NA"
+                },
+                "power_limit_en":{
+                    "size": 1,
+                    "offset": 22,
+                    "format": "add_16bit_uint",
+                    "switch_register": "NA",
+                    "s_f": "NA",
+                    "m_f": "NA"
+                },
+                "wset_sf":{
+                    "size": 1,
+                    "offset": 55,
+                    "format": "add_16bit_uint",
+                    "switch_register": "NA",
+                    "s_f": "NA",
+                    "m_f": "NA"
+                }
+    
+            }
+        }
+    },
+    "fronius_primo": {
+        "block1": {
+            "registers":"hr",
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "start_address": 40237,
+            "Length" : 24,
+            "data": {
+                    "power_limit_pct": {
+                        "size": 1,
+                        "offset": 5,
+                        "format": "add_16bit_uint",
+                        "switch_register": "power_lt_pct_en",
+                        "s_f": "w_sf_pct",
+                        "m_f": "NA"
+                    },
+                    "power_lt_pct_en" : {
+                        "size": 1,
+                        "offset": 9,
+                        "format": "add_16bit_uint",
+                        "switch_register": "NA",
+                        "s_f": "NA",
+                        "m_f": "NA"
+                    },
+                    "w_sf_pct" : {
+                        "size": 1,
+                        "offset": 23,
+                        "format": "add_16bit_int",
+                        "switch_register": "NA",
+                        "s_f": "w_sf",
+                        "m_f": "NA"
+                    }
+                }
+        }
+    },
+    "MAC_60KTL":{
+        "block1":{
+            "registers":"hr",
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "start_address": 0,
+            "Length" : 32,
+            "data": {
+                    "power_limit_pct": {
+                        "size": 1,
+                        "offset": 3,
+                        "format": "add_16bit_uint",
+                        "switch_register": "NA",
+                        "s_f": "NA",
+                        "m_f": "NA"
+                    },
+                    "power_limit_reactive_pct": {
+                        "size": 1,
+                        "offset": 4,
+                        "format": "add_16bit_uint",
+                        "switch_register": "NA",
+                        "s_f": "w_sf_pct",
+                        "m_f": "NA"
+                    },
+                    "power_factor": {
+                        "size": 1,
+                        "offset": 5,
+                        "format": "add_16bit_uint",
+                        "switch_register": "NA",
+                        "s_f": "NA",
+                        "m_f": "NA"
+                    },
+                    "baudrate": {
+                        "size": 1,
+                        "offset": 22,
+                        "format": "add_16bit_uint",
+                        "switch_register": "NA",
+                        "s_f": "NA",
+                        "m_f": "NA"
+                    },
+                    "slave_id": {
+                        "size": 1,
+                        "offset": 30,
+                        "format": "add_16bit_uint",
+                        "switch_register": "NA",
+                        "s_f": "NA",
+                        "m_f": "NA"
+                    },
+                    "power_limit_en":{
+                        "size": 1,
+                        "offset": 360,
+                        "format": "add_16bit_uint",
+                        "switch_register": "NA",
+                        "s_f": "NA",
+                        "m_f": "NA"
+                    },
+                    "decrease_power":{
+                        "size": 2,
+                        "offset": 361,
+                        "format": "add_32bit_uint",
+                        "switch_register": "power_limit_en",
+                        "s_f": "NA",
+                        "m_f": 0.1
+                    },
+                    "increse_power":{
+                        "size": 2,
+                        "offset": 363,
+                        "format": "add_32bit_uint",
+                        "switch_register": "power_limit_en",
+                        "s_f": "NA",
+                        "m_f": 0.1
+                    }
+            }
+        },
+        "block2":{
+            "registers":"hr",
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "start_address": 360,
+            "Length" : 6,
+            "data": {
+                "power_limit_en":{
+                        "size": 1,
+                        "offset": 0,
+                        "format": "add_16bit_uint",
+                        "switch_register": "NA",
+                        "s_f": "NA",
+                        "m_f": "NA"
+                    },
+                    "decrease_power":{
+                        "size": 2,
+                        "offset": 1,
+                        "format": "add_32bit_uint",
+                        "switch_register": "power_limit_en",
+                        "s_f": "NA",
+                        "m_f": 0.1
+                    },
+                    "increse_power":{
+                        "size": 2,
+                        "offset": 3,
+                        "format": "add_32bit_uint",
+                        "switch_register": "power_limit_en",
+                        "s_f": "NA",
+                        "m_f": 0.1
+                    }
+            }
+        }
+    },
+    "polycab":{},
+    "SG125CX": {
+        "block1": {
+            "registers": "hr",
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "start_address": 5000,
+            "Length": 10,
+            "data": {
+                "power_limit_en": {
+                    "size": 1,
+                    "offset": 7,
+                    "format": "add_16bit_uint",
+                    "switch_register": "NA",
+                    "s_f": "NA",
+                    "m_f": "NA"
+                },
+                "power_limit_pct": {
+                    "size": 1,
+                    "offset": 8,
+                    "format": "add_16bit_uint",
+                    "switch_register": "power_limit_en",
+                    "s_f": "NA",
+                    "m_f": 0.1
+                }
+            }
+        }
+    },
+    "SG125CX-P2": {
+        "block1": {
+            "registers": "hr",
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "start_address": 5000,
+            "Length": 10,
+            "data": {
+                "power_limit_en": {
+                    "size": 1,
+                    "offset": 6,
+                    "format": "add_16bit_uint",
+                    "switch_register": "NA",
+                    "s_f": "NA",
+                    "m_f": "NA"
+                },
+                "power_limit_pct": {
+                    "size": 1,
+                    "offset": 7,
+                    "format": "add_16bit_uint",
+                    "switch_register": "power_limit_en",
+                    "s_f": "NA",
+                    "m_f": 0.1
+                }
+            }
+        }
+    },
+    "EM6400NG": {},
+    "EMG6436H": {},
+    "WMS": {},
+    "M70A": {},
+    "M30A": {},
+    "MAC_100KTL": {}
+}

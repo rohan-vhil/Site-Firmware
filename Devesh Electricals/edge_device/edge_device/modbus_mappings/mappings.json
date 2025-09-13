@@ -1,0 +1,218 @@
+{
+    "solis":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "registers": "ir",
+            "start_address": 3004,
+            "Length": 50,
+            "data":{
+                "total_power":{
+                    "size":2,
+                    "offset":0,
+                    "format":"decode_32bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "L1_voltage":{
+                    "size":1,
+                    "offset":29,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L2_voltage":{
+                    "size":1,
+                    "offset":30, 
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L3_voltage":{
+                    "size":1,
+                    "offset":31,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L1_current":{
+                    "size":1,
+                    "offset":32,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L2_current":{
+                    "size":1,
+                    "offset":33,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "L3_current":{
+                    "size":1,
+                    "offset":34,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "total_energy":{
+                    "size":2,
+                    "offset":4,
+                    "format":"decode_32bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "today_energy":{
+                    "size":1,
+                    "offset":10,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "acfreq":{
+                    "size":1,
+                    "offset":38,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.01
+                },
+                "fault":{
+                    "size":1,
+                    "offset":39,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                }
+            }
+        }
+    },
+    "wms":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "registers": "hr",
+            "start_address": 1,
+            "Length": 7,
+            "data":{
+                "wind_direction":{
+                    "size":1,
+                    "offset":0,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "wind_speed":{
+                    "size":1,
+                    "offset":1,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "ambient_temperature":{
+                    "size":1,
+                    "offset":2,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                },
+                "humidity":{
+                    "size":1,
+                    "offset":3,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "solar_radition":{
+                    "size":1,
+                    "offset":4,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "rain_gauge":{
+                    "size":1,
+                    "offset":5,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "module_temperature":{
+                    "size":1,
+                    "offset":6,
+                    "format":"decode_16bit_int",
+                    "s_f":"NA",
+                    "m_f":0.1
+                }
+            }
+        }
+    },
+    "LG_6435P":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "registers": "hr",
+            "start_address": 100,
+            "Length": 4,
+            "data":{
+                "total_power":{
+                    "size":2,
+                    "offset":0,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                }
+            }
+        },
+        "block2":{
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "registers": "hr",
+            "start_address": 158,
+            "Length": 4,
+            "data":{
+                "total_energy":{
+                    "size":2,
+                    "offset":0,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                }
+            }
+        }
+    },
+    "Elite_440":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "registers": "hr",
+            "start_address": 147,
+            "Length": 4,
+            "data":{
+                "total_power":{
+                    "size":2,
+                    "offset":0,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                }
+            }
+        },
+        "block2":{
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "registers": "hr",
+            "start_address": 201,
+            "Length": 4,
+            "data":{
+                "total_energy":{
+                    "size":2,
+                    "offset":0,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                }
+            }
+        }
+    }
+}

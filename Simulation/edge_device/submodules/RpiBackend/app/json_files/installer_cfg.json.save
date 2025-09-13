@@ -1,0 +1,11 @@
+{
+    "installer": "Harshal",
+    "number_of_devices": 0,
+    "VPP ID": 255,
+    "site id": "test",
+    "timezone": "Asia/Kolkata",
+    "mqtt server": "test.mqtt.org",
+    "device_list": [
+
+]
+}

@@ -1,0 +1,138 @@
+{
+    "digital_signals":{
+        "start_address" : 2001,
+        "num_devices" : 1,
+        "devices" : [
+            {
+                "device_name" : "HT",
+                "device_type" : "HT_PANEL",
+                " data_objects" : [
+                    {
+                        "name" : "SB STATUS",
+                        "type" : "M_DP_NA_1"
+                    }
+                ] 
+            }
+        ]
+
+    },
+    "analog_signals":{
+        "start_address" : 3001,
+        "num_devices" : 4,
+        "devices" : [
+            {
+                "device_name" : "ht",
+                "device_type" : "HT",
+                "data_objects" : [{
+                    "name": "total_power",
+                    "type" : "M_ME_NC_1"
+                },
+                {
+                    "name": "reactive_power",
+                    "type" : "M_ME_NC_1"
+                },
+                {
+                    "name": "voltage",
+                    "type" : "M_ME_NC_1"
+                },
+                                {
+                    "name": "frequency",
+                    "type" : "M_ME_NC_1"
+                }
+            ]
+            },
+            {
+                "device_name" : "solar-inverter:GROWATT123:123abc",
+                "device_type" : "inverter",
+                "data_objects" : [{
+                    "name": "total_power",
+                    "type" : "M_ME_NC_1"                },
+                {
+                    "name": "reactive_power",
+                    "type" : "M_ME_NC_1"
+                },
+                {
+                    "name": "voltage",
+                    "type" : "M_ME_NC_1"
+                },
+                                {
+                    "name": "frequency",
+                    "type" : "M_ME_NC_1"
+                }
+            ]
+            },
+
+            {
+                "device_name" : "battery",
+                "device_type" : "battery",
+                "data_objects" : [{
+                    "name": "total_power",
+                    "type" : "M_ME_NC_1"                },
+                {
+                    "name": "reactive_power",
+                    "type" : "M_ME_NC_1"
+                },
+                {
+                    "name": "voltage",
+                    "type" : "M_ME_NC_1"
+                },
+                                {
+                    "name": "frequency",
+                    "type" : "M_ME_NC_1"
+                },
+                {
+                    "name": "soc",
+                    "type" : "M_ME_NC_1"
+                },
+
+                {
+                    "name": "soh",
+                    "type" : "M_ME_NC_1"
+                }
+            ]
+            },
+            {
+                "device_name" : "DG-meter",
+                "device_type" : "DG",
+                "data_objects" : [{
+                    "name": "total_power",
+                    "type" : "M_ME_NC_1"                },
+                {
+                    "name": "reactive_power",
+                    "type" : "M_ME_NC_1"
+                },
+                {
+                    "name": "voltage",
+                    "type" : "M_ME_NC_1"
+                },
+                                {
+                    "name": "frequency",
+                    "type" : "M_ME_NC_1"
+                }
+            ]
+            },
+            {
+                "device_name" : "load-meter",
+                "device_type" : "load",
+                "data_objects" : [{
+                    "name": "total_power",
+                    "type" : "M_ME_NC_1"                },
+                {
+                    "name": "reactive_power",
+                    "type" : "M_ME_NC_1"
+                },
+                {
+                    "name": "voltage",
+                    "type" : "M_ME_NC_1"
+                },
+                {
+                    "name": "frequency",
+                    "type" : "M_ME_NC_1"
+                }
+            ]
+            }
+        ]
+
+    }
+
+}

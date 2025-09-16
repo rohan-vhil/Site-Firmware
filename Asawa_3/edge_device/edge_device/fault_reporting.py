@@ -30,7 +30,6 @@ class FaultProcessor:
         try:
             response = requests.post(self.api_url, json=payload, timeout=10)
             response.raise_for_status()
-            # To count devices, we look inside the first object and subtract 1 for the timestamp key
             fault_object = payload[0]
             device_count = len(fault_object) - 1
             print(f"--- FaultProcessor: API call successful for {device_count} device(s). ---")
@@ -98,6 +97,21 @@ class FaultProcessor:
                                     })
                             if active_faults:
                                 new_faults_by_device[device_id] = active_faults
+                        
+                        elif fault_type == 'hexadecimal':
+                            # **MODIFIED BLOCK FOR HEXADECIMAL**
+                            hex_key_with_prefix = hex(fault_code).lower()
+                            hex_key_without_prefix = hex_key_with_prefix[2:]
+                            
+                            # Check for either key format in the JSON file
+                            fault_info = fault_definitions.get(hex_key_with_prefix) or fault_definitions.get(hex_key_without_prefix)
+                            
+                            if fault_info:
+                                new_faults_by_device[device_id] = {
+                                    "fault_code": hex_key_with_prefix, # Always report the standard format
+                                    "fault_message": fault_info.get("fault_message"),
+                                    "severity": fault_info.get("severity")
+                                }
 
                         elif fault_type == 'code':
                             code_key = str(fault_code)
@@ -115,14 +129,11 @@ class FaultProcessor:
                 if new_faults_by_device:
                     print("\n--- FaultProcessor: New faults found! Preparing to send to API. ---")
                     
-                    # **REVISED PAYLOAD FORMATTING**
-                    # Create a single object with the timestamp and all new device faults
                     payload_object = {
                         "timestamp": int(time.time()),
                         **new_faults_by_device
                     }
                     
-                    # Wrap the final object in a list before sending
                     self._send_faults_to_api([payload_object])
                 else:
                     print("\n--- FaultProcessor: No new faults to report in this cycle. ---")

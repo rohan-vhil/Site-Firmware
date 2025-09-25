@@ -26,7 +26,7 @@ mqtt_ip: str = "test.mosquitto.org"
 controller_id: str
 per_phase_data =['V','I','P','Q','S','En']
 
-agg_data = ['Pf','total_power','total_energy','total_voltage','acfreq','temperature','apparent_power','reactive_power','input_power',"SoC","SoH",'current','import_energy','export_energy','irradiance','ambient_temperature','internal_ambient_temperature','module_temperature','internal_module_temperature','wind_direction','wind_speed','humidity','solar_radition','rain_gauge']
+agg_data = ['Pf','total_power','total_energy','total_voltage','acfreq','temperature','apparent_power','reactive_power','input_power',"SoC","SoH",'current','import_energy','export_energy','irradiance','ambient_temperature','internal_ambient_temperature','module_temperature','internal_module_temperature']
 data_decode = {
     "V" : "voltage",
     "I" : "current",
@@ -49,6 +49,8 @@ component_data = {
 path_config.path_cfg = path_config.pathConfig()
 CONTROL_JSON_PATH = os.path.join(path_config.path_cfg.base_path, 'control', 'control.json')
 COST_JSON_PATH = os.path.join(path_config.path_cfg.base_path, 'control', 'cost.json')
+ENERGY_LOG_PATH = os.path.join(path_config.path_cfg.base_path, 'control', 'total_energy_log.json')
+
 
 class deviceType(enum.IntEnum):
     solar = 0
@@ -297,7 +299,6 @@ class systemDevice:
     a:dict = {}
     err_registers: err.errRegistor
     ctrl_registers : ctrl_der.controlRegistor
-    read_error: bool
     num_phases :int=1
     phase :str="A"
     connected_to : str = ""
@@ -317,7 +318,6 @@ class systemDevice:
             system_operating_details.battery_storage_capacity += storage_capacity
         self.measured_data = measuredData()
         self.control_data = controlData()
-        self.read_error = False
 
     def createMapForVar(self, var: dataModel, batch, i, var_name):
         var.model_present = True
@@ -497,15 +497,35 @@ class systemDevice:
         control_data = data_set['control']
         if data == [[]]:
             return
+        
         for x in per_phase_data:
             if hasattr(self.measured_data, x):
-                for j in getattr(self.measured_data,x):
-                    j.data = data[j.block_num][j.offset : j.offset + j.size]
-                    j.getData(data)
+                for model_instance in getattr(self.measured_data, x):
+                    if model_instance:
+                        model_instance.data = data[model_instance.block_num][model_instance.offset : model_instance.offset + model_instance.size]
+                        model_instance.getData(data)
+        
         for x in agg_data:
-            if(hasattr(self.measured_data,x)):
-                getattr(self.measured_data,x).data = data[getattr(self.measured_data,x).block_num][getattr(self.measured_data,x).offset : getattr(self.measured_data,x).offset + getattr(self.measured_data,x).size]
-                getattr(self.measured_data,x).getData(data)
+            if hasattr(self.measured_data, x):
+                model_instance = getattr(self.measured_data, x)
+                if model_instance:
+                    model_instance.data = data[model_instance.block_num][model_instance.offset : model_instance.offset + model_instance.size]
+                    model_instance.getData(data)
+
+        for x in component_data.keys():
+            if hasattr(self.measured_data, x):
+                for model_instance in getattr(self.measured_data, x):
+                    if model_instance:
+                        model_instance.data = data[model_instance.block_num][model_instance.offset : model_instance.offset + model_instance.size]
+                        model_instance.getData(data)
+        
+        for x in fault_data:
+            if hasattr(self.measured_data, x):
+                model_instance = getattr(self.measured_data, x)
+                if model_instance:
+                    model_instance.data = data[model_instance.block_num][model_instance.offset : model_instance.offset + model_instance.size]
+                    model_instance.getData(data)
+
         if(self.control_data.poweer_lt.model_present):
             self.control_data.poweer_lt.getFactors(control_data)
         if(self.control_data.power_pct_stpt.model_present):
@@ -757,39 +777,96 @@ def getActiveControlMode():
 
 def getAllData():
     data = {}
+    try:
+        with open(ENERGY_LOG_PATH, 'r') as f:
+            energy_log = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        energy_log = {}
+
     for device in device_list:
-        data[str(device.device_id)] = {}
+        device_id_str = str(device.device_id)
+        data[device_id_str] = {}
+
         if device.device_type in deviceType_e2s:
-            data[str(device.device_id)]["type"] = str(device.num_phases) + "ph_" + deviceType_e2s[device.device_type]
+            data[device_id_str]["type"] = str(device.num_phases) + "ph_" + deviceType_e2s[device.device_type]
 
         for param in per_phase_data:
             if hasattr(device.measured_data, param):
                 i = 0
                 for x in getattr(device.measured_data, param):
                     if x is not None:
-                        data[str(device.device_id)]["L" + str(i + 1) + "_" + data_decode[param]] = x.value
-                    i = i + 1
+                        data[device_id_str]["L" + str(i + 1) + "_" + data_decode[param]] = x.value
+                    i += 1
 
         for param in agg_data:
             if hasattr(device.measured_data, param):
                 model = getattr(device.measured_data, param)
                 if model is not None:
-                    data[str(device.device_id)][param] = model.value
+                    if param == 'total_energy':
+                        current_energy = model.value
+                        logged_energy = energy_log.get(device_id_str, 0)
 
+                        final_energy = logged_energy
+                        # A valid reading must be greater than or equal to the logged value
+                        # and the increase must not be abnormally large.
+                        if current_energy >= logged_energy and (logged_energy == 0 or (current_energy - logged_energy) <= 100):
+                             # Plausible value, use the new reading
+                            final_energy = current_energy
+                            energy_log[device_id_str] = final_energy
+                        # Otherwise, if the reading is lower or jumps too high, we stick with the last good value (`final_energy` remains `logged_energy`)
+
+                        data[device_id_str][param] = final_energy
+                    else:
+                        data[device_id_str][param] = model.value
 
         for base_param in component_data.keys():
             if hasattr(device.measured_data, base_param):
                 models = getattr(device.measured_data, base_param)
-                parts = base_param.split('_')
-                prefix = parts[0]
-                suffix = '_'.join(parts[1:])
+                parts = base_param.split('_', 1)
+                category = parts[0]
+                measurement_type = parts[1]
+
+                if category not in data[device_id_str]:
+                    data[device_id_str][category] = {}
+
                 idx = 1
                 for model in models:
                     if model is not None and model.model_present:
-                        output_name = f"{prefix}{idx}_{suffix}"
-                        data[str(device.device_id)][output_name] = model.value
+                        output_name = f"{category}{idx}_{measurement_type}"
+                        data[device_id_str][category][output_name] = round(model.value, 2)
                     idx += 1
+    
+    with open(ENERGY_LOG_PATH, 'w') as f:
+        json.dump(energy_log, f)
+
     return data
+
+def getLivePower():
+    live_power_data = {}
+    for device in device_list:
+        # Check if the 'total_power' attribute exists on the measured_data object
+        if hasattr(device.measured_data, 'total_power'):
+            model = getattr(device.measured_data, 'total_power')
+            # Ensure the model itself is not None and has been populated
+            if model is not None and model.model_present:
+                device_id_str = str(device.device_id)
+                live_power_data[device_id_str] = model.value
+    return live_power_data
+
+def getFaultData():
+    fault_output = {}
+    for device in device_list:
+        device_faults = {}
+        for param in fault_data:
+            if hasattr(device.measured_data, param):
+                model = getattr(device.measured_data, param)
+                if model is not None and model.model_present:
+                    device_faults[param] = model.value
+        
+        if device_faults:
+            fault_output[str(device.device_id)] = device_faults
+            
+    return fault_output
 
 def getAggDG():
     system_operating_details.aggDG = 0

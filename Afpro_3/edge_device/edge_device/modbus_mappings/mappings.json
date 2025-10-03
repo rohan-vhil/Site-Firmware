@@ -300,5 +300,122 @@
                 }
             }
         }
+    },
+    "MFM376":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "registers": "ir",
+            "start_address": 0,
+            "Length": 100,
+            "data":{
+                "L1_voltage":{
+                    "size":2,
+                    "offset":0,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L2_voltage":{
+                    "size":2,
+                    "offset":2, 
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L3_voltage":{
+                    "size":2,
+                    "offset":4,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L1_current":{
+                    "size":2,
+                    "offset":16,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L2_current":{
+                    "size":2,
+                    "offset":18,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L3_current":{
+                    "size":2,
+                    "offset":20,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L1_power":{
+                    "size":2,
+                    "offset":24,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L2_power":{
+                    "size":2,
+                    "offset":26,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "L3_power":{
+                    "size":2,
+                    "offset":28,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "total_power":{
+                    "size":2,
+                    "offset":52,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":1000
+                },
+                "total_energy":{
+                    "size":2,
+                    "offset":90,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":1000
+                },
+                "Pf":{
+                    "size":2,
+                    "offset":48,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "acfreq":{
+                    "size":2,
+                    "offset":50,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "reactive_power":{
+                    "size":2,
+                    "offset":54,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                },
+                "apparent_power":{
+                    "size":2,
+                    "offset":56,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":"NA"
+                }
+                
+            }
+        }
     }
 }

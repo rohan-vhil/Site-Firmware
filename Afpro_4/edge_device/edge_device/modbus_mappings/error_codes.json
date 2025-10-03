@@ -1,0 +1,69 @@
+{
+    "MAC_100KTL":{
+        "fault":{
+            "type": "code",
+            "codes":{
+                "100": {
+                    "fault_message": "Internal Communication Fault (Master and Slave CPU)",
+                    "severity": "High"
+                },
+                "101": {
+                    "fault_message": "Internal Communication Fault",
+                    "severity": "High"
+                },
+                "102": {
+                    "fault_message": "Consistent Fault",
+                    "severity": "Medium"
+                },
+                "116": {
+                    "fault_message": "EEPROM Read/Write Fault",
+                    "severity": "High"
+                },
+                "117": {
+                    "fault_message": "Relay Fault",
+                    "severity": "High"
+                },
+                "118": {
+                    "fault_message": "Init Model Fault",
+                    "severity": "Medium"
+                },
+                "119": {
+                    "fault_message": "GFCI Device Damage",
+                    "severity": "High"
+                },
+                "120": {
+                    "fault_message": "HCT Fault",
+                    "severity": "Medium"
+                },
+                "201": {
+                    "fault_message": "Residual Current Too High",
+                    "severity": "High"
+                },
+                "202": {
+                    "fault_message": "PV Voltage Too High",
+                    "severity": "High"
+                },
+                "203": {
+                    "fault_message": "PV Isolation Low",
+                    "severity": "High"
+                },
+                "300": {
+                    "fault_message": "Grid Voltage Out of Range",
+                    "severity": "High"
+                },
+                "302": {
+                    "fault_message": "No AC Connection",
+                    "severity": "High"
+                },
+                "304": {
+                    "fault_message": "Grid Frequency Out of Range",
+                    "severity": "High"
+                },
+                "401": {
+                    "fault_message": "Communication Fault with Meter",
+                    "severity": "High"
+                }
+            }
+        }
+    }
+}

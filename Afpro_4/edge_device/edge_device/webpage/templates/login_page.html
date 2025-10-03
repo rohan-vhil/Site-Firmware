@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Enter Setup details {% endblock %}</h1>
+    <form method="post">
+        <label for="ssid">SSID</label>
+        <br>
+        <input type="text" name="ssid"
+               placeholder="wifi ssid"
+               value="{{ request.form['ssid'] }}"></input>
+        <br>
+
+        <label for="pasword">password</label>
+        <br>
+        <textarea name="password"
+                  placeholder="password"
+                  rows="2"
+                  cols="15"
+                  >{{ request.form['password'] }}</textarea>
+        <br>
+
+        <br>
+
+        <label for="installer_name">installer_name</label>
+        <br>
+        <textarea name="installer_name"
+                  placeholder="installer"
+                  rows="2"
+                  cols="15"
+                  >{{ request.form['installer'] }}</textarea>
+        <br>
+        <label for="num_devices">Number of devices</label>
+        <br>
+        <input type="text" name="num_devices"
+               placeholder="number of devices"
+               value="{{ request.form['num_devices'] }}"></input>
+        <br>
+
+        <label for="bum_devices">VPP id</label>
+        <br>
+        <input type="text" name="vpp_is"
+               placeholder="VPP ID"
+               value="{{ request.form['vpp_id'] }}"></input>
+        <br>
+
+        <button type="submit">Next</button>
+    </form>
+{% endblock %}

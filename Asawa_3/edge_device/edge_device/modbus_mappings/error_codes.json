@@ -25,7 +25,7 @@
                 },
                 "5": {
                     "fault_message": "Phase Jump",
-                    "severity": "Warning"
+                    "severity": "Medium"
                 },
                 "6": {
                     "fault_message": "Grid Quality",
@@ -37,15 +37,15 @@
                 },
                 "8": {
                     "fault_message": "No Grid",
-                    "severity": "Warning"
+                    "severity": "High"
                 },
                 "9": {
                     "fault_message": "Under Voltage Range (R Phase)",
-                    "severity": "Warning"
+                    "severity": "High"
                 },
                 "10": {
                     "fault_message": "Over Voltage Range (R Phase)",
-                    "severity": "Warning"
+                    "severity": "High"
                 },
                 "11": {
                     "fault_message": "Over Transient Voltage Range(R Phase)",
@@ -65,7 +65,7 @@
                 },
                 "15": {
                     "fault_message": "Over Voltage Range (S Phase)",
-                    "severity": "Warning"
+                    "severity": "High"
                 }
             }
         }

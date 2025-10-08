@@ -1,0 +1,32 @@
+{
+  "site id": "SIM_SITE_001",
+  "device_list": [
+    {
+      "device_type": "solar",
+      "comm_type": "modbus-tcp",
+      "num_phases": "3",
+      "device_id": "solar-inverter:GROWATT123:123abc",
+      "phases": "1,2,3",
+      "modbus_tcp_details": {
+        "IP": "127.0.0.1",
+        "port": "8506",
+        "slave_id": "1"
+      },
+      "part_num": "GROWATT123",
+      "rated_power": "60000"
+    },
+    {
+      "device_type": "meter",
+      "comm_type": "modbus-tcp",
+      "num_phases": "3",
+      "device_id":"load:UMG104:123abd",
+      "phases": "1,2,3",
+      "modbus_tcp_details": {
+        "IP": "127.0.0.1",
+        "port": "8505",
+        "slave_id": "1"
+      },
+      "part_num": "UMG104"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+    "3001": {
+        "device_id": "grid:UMG105:grid001",
+        "parameter": "L1_voltage"
+    },
+    "3002": {
+        "device_id": "grid:UMG105:grid001",
+        "parameter": "Pf"
+    },
+    "3003": {
+        "device_id": "grid:UMG105:grid001",
+        "parameter": "acfreq"
+    },
+    "3004": {
+        "device_id": "grid:UMG105:grid001",
+        "parameter": "total_energy"
+    },
+    "3005": {
+        "device_id": "grid:UMG105:grid001",
+        "parameter": "total_power"
+    },
+    "3006": {
+        "device_id": "load:UMG104:123abd",
+        "parameter": "L1_voltage"
+    },
+    "3007": {
+        "device_id": "load:UMG104:123abd",
+        "parameter": "Pf"
+    },
+    "3008": {
+        "device_id": "load:UMG104:123abd",
+        "parameter": "acfreq"
+    },
+    "3009": {
+        "device_id": "load:UMG104:123abd",
+        "parameter": "total_energy"
+    },
+    "3010": {
+        "device_id": "load:UMG104:123abd",
+        "parameter": "total_power"
+    },
+    "3011": {
+        "device_id": "solar-inverter:GROWATT123:123abc",
+        "parameter": "L1_voltage"
+    },
+    "3012": {
+        "device_id": "solar-inverter:GROWATT123:123abc",
+        "parameter": "Pf"
+    },
+    "3013": {
+        "device_id": "solar-inverter:GROWATT123:123abc",
+        "parameter": "acfreq"
+    },
+    "3014": {
+        "device_id": "solar-inverter:GROWATT123:123abc",
+        "parameter": "total_energy"
+    },
+    "3015": {
+        "device_id": "solar-inverter:GROWATT123:123abc",
+        "parameter": "total_power"
+    },
+    "3016": {
+        "device_id": "solar-inverter:GROWATT456:123pqr",
+        "parameter": "L1_voltage"
+    },
+    "3017": {
+        "device_id": "solar-inverter:GROWATT456:123pqr",
+        "parameter": "Pf"
+    },
+    "3018": {
+        "device_id": "solar-inverter:GROWATT456:123pqr",
+        "parameter": "acfreq"
+    },
+    "3019": {
+        "device_id": "solar-inverter:GROWATT456:123pqr",
+        "parameter": "total_energy"
+    },
+    "3020": {
+        "device_id": "solar-inverter:GROWATT456:123pqr",
+        "parameter": "total_power"
+    }
+}

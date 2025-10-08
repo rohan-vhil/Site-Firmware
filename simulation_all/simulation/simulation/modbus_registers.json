@@ -1,0 +1,39 @@
+{
+  "GROWATT123": {
+    "map": {
+      "block1": {
+        "byteorder": "BIG",
+        "wordorder": "BIG",
+        "registers": "hr",
+        "start_address": 40000,
+        "Length": 10,
+        "data": {
+          "L1_voltage":    { "offset": 0, "format": "decode_16bit_int", "size": 1 },
+          "L2_voltage":    { "offset": 1, "format": "decode_16bit_int", "size": 1 },
+          "L3_voltage":    { "offset": 2, "format": "decode_16bit_int", "size": 1 },
+          "total_power":   { "offset": 3, "format": "decode_16bit_int", "size": 1 },
+          "acfreq":        { "offset": 4, "format": "decode_16bit_int", "size": 1 }
+        }
+      }
+    }
+  },
+
+  "UMG104": {
+    "map": {
+      "block1": {
+        "byteorder": "BIG",
+        "wordorder": "BIG",
+        "registers": "hr",
+        "start_address": 41000,
+        "Length": 10,
+        "data": {
+          "L1_voltage":    { "offset": 0, "format": "decode_16bit_int", "size": 1 },
+          "L2_voltage":    { "offset": 1, "format": "decode_16bit_int", "size": 1 },
+          "L3_voltage":    { "offset": 2, "format": "decode_16bit_int", "size": 1 },
+          "total_power":   { "offset": 3, "format": "decode_16bit_int", "size": 1 },
+          "acfreq":        { "offset": 4, "format": "decode_16bit_int", "size": 1 }
+        }
+      }
+    }
+  }
+}

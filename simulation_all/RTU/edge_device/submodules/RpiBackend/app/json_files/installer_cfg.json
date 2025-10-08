@@ -1,0 +1,62 @@
+{
+  "site id": "SIM_SITE_001",
+  "device_list": [
+    
+    {
+      "device_type": "solar-inverter",
+      "comm_type": "modbus-tcp",
+      "num_phases": "3",
+      "device_id": "solar-inverter:GROWATT123:123abc",
+      "phases": "1,2,3",
+      "modbus_tcp_details": {
+        "IP": "127.0.0.1",
+        "port": "8507",
+        "slave_id": "1"
+      },
+      "part_num": "GROWATT123",
+      "rated_power": "70000"
+    },
+    {
+      "device_type": "solar-inverter",
+      "comm_type": "modbus-tcp",
+      "num_phases": "3",
+      "device_id": "solar-inverter:GROWATT456:123pqr",
+      "phases": "1,2,3",
+      "modbus_tcp_details": {
+        "IP": "127.0.0.1",
+        "port": "8507",
+        "slave_id": "2"
+      },
+      "part_num": "GROWATT_PCT_123",
+      "rated_power": "30000"
+    },
+    {
+      "device_type": "meter",
+      "comm_type": "modbus-tcp",
+      "num_phases": "3",
+      "device_id": "load:UMG104:123abd",
+      "connected_to": "DG",
+      "phases": "1,2,3",
+      "modbus_tcp_details": {
+        "IP": "127.0.0.1",
+        "port": "8507",
+        "slave_id": "3"
+      },
+      "part_num": "UMG104"
+    },
+    {
+      "device_type": "meter",
+      "comm_type": "modbus-tcp",
+      "num_phases": "3",
+      "device_id": "grid:UMG105:grid001",
+      "phases": "1,2,3",
+      "connected_to": "grid",
+      "modbus_tcp_details": {
+        "IP": "127.0.0.1",
+        "port": "8507",
+        "slave_id": "4"
+      },
+      "part_num": "UMG105"
+    }
+  ]
+}

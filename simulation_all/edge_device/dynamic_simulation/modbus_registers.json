@@ -1,0 +1,74 @@
+{
+  "GROWATT123": {
+    "map": {
+      "block1": {
+        "byteorder": "BIG",
+        "wordorder": "BIG",
+        "registers": "hr",
+        "start_address": 40000,
+        "Length": 10,
+        "data": {
+          "L1_voltage": { "offset": 0, "format": "decode_16bit_uint", "size": 1 },
+          "L2_voltage": { "offset": 1, "format": "decode_16bit_uint", "size": 1 },
+          "L3_voltage": { "offset": 2, "format": "decode_16bit_uint", "size": 1 },
+          "total_power": { "offset": 3, "format": "decode_32bit_uint", "size": 2 },
+          "acfreq":      { "offset": 5, "format": "decode_16bit_uint", "size": 1 }
+        }
+      }
+    }
+  },
+  "GROWATT_PCT_123": {
+    "map": {
+      "block1": {
+        "byteorder": "BIG",
+        "wordorder": "BIG",
+        "registers": "hr",
+        "start_address": 40000,
+        "Length": 10,
+        "data": {
+          "L1_voltage": { "offset": 0, "format": "decode_16bit_uint", "size": 1 },
+          "L2_voltage": { "offset": 1, "format": "decode_16bit_uint", "size": 1 },
+          "L3_voltage": { "offset": 2, "format": "decode_16bit_uint", "size": 1 },
+          "total_power": { "offset": 3, "format": "decode_32bit_uint", "size": 2 },
+          "acfreq":      { "offset": 5, "format": "decode_16bit_uint", "size": 1 }
+        }
+      }
+    }
+  },
+  "UMG104": {
+    "map": {
+      "block1": {
+        "byteorder": "BIG",
+        "wordorder": "BIG",
+        "registers": "hr",
+        "start_address": 3000,
+        "Length": 10,
+        "data": {
+          "L1_voltage": { "offset": 1, "format": "decode_16bit_uint", "size": 1 },
+          "L2_voltage": { "offset": 2, "format": "decode_16bit_uint", "size": 1 },
+          "L3_voltage": { "offset": 3, "format": "decode_16bit_uint", "size": 1 },
+          "total_power": { "offset": 4, "format": "decode_32bit_uint", "size": 2 },
+          "acfreq":      { "offset": 6, "format": "decode_16bit_uint", "size": 1 }
+        }
+      }
+    }
+  },
+  "UMG105": {
+    "map": {
+      "block1": {
+        "byteorder": "BIG",
+        "wordorder": "BIG",
+        "registers": "hr",
+        "start_address": 41010,
+        "Length": 10,
+        "data": {
+          "L1_voltage": { "offset": 0, "format": "decode_16bit_uint", "size": 1 },
+          "L2_voltage": { "offset": 1, "format": "decode_16bit_uint", "size": 1 },
+          "L3_voltage": { "offset": 2, "format": "decode_16bit_uint", "size": 1 },
+          "total_power": { "offset": 3, "format": "decode_32bit_uint", "size": 2 },
+          "acfreq":      { "offset": 5, "format": "decode_16bit_uint", "size": 1 }
+        }
+      }
+    }
+  }
+}

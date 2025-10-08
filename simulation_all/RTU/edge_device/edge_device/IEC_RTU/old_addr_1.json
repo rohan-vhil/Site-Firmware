@@ -1,0 +1,64 @@
+{
+    "digital_signals":{
+        "start_address" : 2001,
+        "num_devices" : 1,
+        "devices" : [
+            {
+                "device_name" : "HT",
+                "device_type" : "HT_PANEL",
+                " data_objects" : [
+                    {
+                        "name" : "SB STATUS",
+                        "type" : "M_DP_NA_1"
+                    }
+                ]
+            }
+        ]
+    },
+    "analog_signals":{
+        "start_address" : 3001,
+        "num_devices" : 5,
+        "devices" : [
+            {
+                "device_name" : "grid_meter",
+                "device_type" : "grid",
+                "firmware_device_id": "grid:UMG10521:grid001",
+                "data_objects" : [
+                    {"name": "total_power", "type" : "M_ME_NC_1"},
+                    {"name": "L1_voltage", "type" : "M_ME_NC_1"},
+                    {"name": "acfreq", "type" : "M_ME_NC_1"}
+                ]
+            },
+            {
+                "device_name" : "inverter1",
+                "device_type" : "inverter",
+                "firmware_device_id": "solar-inverter:GROWATT333:123abc",
+                "data_objects" : [
+                    {"name": "total_power", "type" : "M_ME_NC_1"},
+                    {"name": "L1_voltage", "type" : "M_ME_NC_1"},
+                    {"name": "acfreq", "type" : "M_ME_NC_1"}
+                ]
+            },
+            {
+                "device_name" : "inverter2",
+                "device_type" : "inverter",
+                "firmware_device_id": "solar-inverter:GROWATT111:123pqr",
+                "data_objects" : [
+                    {"name": "total_power", "type" : "M_ME_NC_1"},
+                    {"name": "L1_voltage", "type" : "M_ME_NC_1"},
+                    {"name": "acfreq", "type" : "M_ME_NC_1"}
+                ]
+            },
+            {
+                "device_name" : "load-meter",
+                "device_type" : "load",
+                "firmware_device_id": "load:UMG10412:123abd",
+                "data_objects" : [
+                    {"name": "total_power", "type" : "M_ME_NC_1"},
+                    {"name": "L1_voltage", "type" : "M_ME_NC_1"},
+                    {"name": "acfreq", "type" : "M_ME_NC_1"}
+                ]
+            }
+        ]
+    }
+}

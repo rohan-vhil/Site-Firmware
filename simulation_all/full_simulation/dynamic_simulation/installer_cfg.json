@@ -1,0 +1,35 @@
+{
+  "site id": "MY_DYNAMIC_SITE",
+  "device_list": [
+    {
+      "part_num": "GROWATT123",
+      "rated_power": 70000,
+      "role": "inverter",
+      "modbus_tcp_details": {
+        "slave_id": 1
+      }
+    },
+    {
+      "part_num": "GROWATT_PCT_123",
+      "rated_power": 30000,
+      "role": "inverter",
+      "modbus_tcp_details": {
+        "slave_id": 2
+      }
+    },
+    {
+      "part_num": "UMG104",
+      "role": "load_meter",
+      "modbus_tcp_details": {
+        "slave_id": 3
+      }
+    },
+    {
+      "part_num": "UMG105",
+      "role": "grid_meter",
+      "modbus_tcp_details": {
+        "slave_id": 4
+      }
+    }
+  ]
+}

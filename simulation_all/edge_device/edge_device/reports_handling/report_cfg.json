@@ -1,0 +1,6 @@
+{
+    "reporting_period":10,
+    "reading_period" : 5,
+    "report_type":"average",
+    "report_url": "https://app.enercog.com/ui/client/no-auth/timescaledb/save-data"
+}

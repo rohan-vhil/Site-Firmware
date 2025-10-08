@@ -1,0 +1,32 @@
+{
+  "site id": "MY_SITE",
+  "device_list": [
+    {
+      "part_num": "GROWATT123",
+      "rated_power": 60000,
+      "modbus_tcp_details": {
+        "IP": "127.0.0.1",
+        "port": 8506,
+        "slave_id": 1
+      }
+    },
+    {
+      "part_num": "UMG104",
+      "role": "load_meter",
+      "modbus_tcp_details": {
+        "IP": "127.0.0.1",
+        "port": 8505,
+        "slave_id": 2
+      }
+    },
+    {
+      "part_num": "UMG105",
+      "role": "grid_meter",
+      "modbus_tcp_details": {
+        "IP": "127.0.0.1",
+        "port": 8504,
+        "slave_id": 3
+      }
+    }
+  ]
+}

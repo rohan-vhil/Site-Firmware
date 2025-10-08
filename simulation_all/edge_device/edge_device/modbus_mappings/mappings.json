@@ -1,0 +1,86 @@
+{
+  "GROWATT123": {
+    
+      "block1": {
+        "byteorder": "BIG",
+        "wordorder": "BIG",
+        "registers": "hr",
+        "start_address": 39999,
+        "Length": 12,
+        "data": {
+          "L1_voltage": { "offset": 0, "format": "decode_16bit_uint", "size": 1 },
+          "L2_voltage": { "offset": 1, "format": "decode_16bit_uint", "size": 1 },
+          "L3_voltage": { "offset": 2, "format": "decode_16bit_uint", "size": 1 },
+          "acfreq": { "offset": 3, "format": "decode_16bit_uint", "size": 1 },
+          "total_power": { "offset": 4, "format": "decode_32bit_uint", "size": 2, "note": "Active Power (W)" },
+          "apparent_power": { "offset": 6, "format": "decode_32bit_uint", "size": 2, "note": "Apparent Power (VA)" },
+          "reactive_power": { "offset": 8, "format": "decode_32bit_uint", "size": 2, "note": "Reactive Power (VAR)" },
+          "total_energy": { "offset": 10, "format": "decode_32bit_uint", "size": 2, "note": "Cumulative Energy","m_f": 0.001 }
+        }
+      
+    }
+  },
+  "GROWATT_PCT_123": {
+    
+      "block1": {
+        "byteorder": "BIG",
+        "wordorder": "BIG",
+        "registers": "hr",
+        "start_address": 39999,
+        "Length": 12,
+        "data": {
+          "L1_voltage": { "offset": 0, "format": "decode_16bit_uint", "size": 1 },
+          "L2_voltage": { "offset": 1, "format": "decode_16bit_uint", "size": 1 },
+          "L3_voltage": { "offset": 2, "format": "decode_16bit_uint", "size": 1 },
+          "acfreq": { "offset": 3, "format": "decode_16bit_uint", "size": 1 },
+          "total_power": { "offset": 4, "format": "decode_32bit_uint", "size": 2, "note": "Active Power (W)" },
+          "apparent_power": { "offset": 6, "format": "decode_32bit_uint", "size": 2, "note": "Apparent Power (VA)" },
+          "reactive_power": { "offset": 8, "format": "decode_32bit_uint", "size": 2, "note": "Reactive Power (VAR)" },
+          "total_energy": { "offset": 10, "format": "decode_32bit_uint", "size": 2, "note": "Cumulative Energy","m_f" : 0.001 }
+        }
+      }
+    
+  },
+  "UMG104": {
+    
+      "block1": {
+        "byteorder": "BIG",
+        "wordorder": "BIG",
+        "registers": "hr",
+        "start_address": 2999,
+        "Length": 12,
+        "data": {
+          "L1_voltage": { "offset": 0, "format": "decode_16bit_uint", "size": 1 },
+          "L2_voltage": { "offset": 1, "format": "decode_16bit_uint", "size": 1 },
+          "L3_voltage": { "offset": 2, "format": "decode_16bit_uint", "size": 1 },
+          "acfreq": { "offset": 3, "format": "decode_16bit_uint", "size": 1 },
+          "total_power": { "offset": 4, "format": "decode_32bit_uint", "size": 2, "note": "Active Power (W)" },
+          "apparent_power": { "offset": 6, "format": "decode_32bit_uint", "size": 2, "note": "Apparent Power (VA)" },
+          "reactive_power": { "offset": 8, "format": "decode_32bit_uint", "size": 2, "note": "Reactive Power (VAR)" },
+          "total_energy": { "offset": 10, "format": "decode_32bit_uint", "size": 2, "note": "Cumulative Energy", "m_f" : 0.001 }
+        }
+      
+    }
+  },
+  "UMG105": {
+    
+      "block1": {
+        "byteorder": "BIG",
+        "wordorder": "BIG",
+        "registers": "hr",
+        "start_address": 41009,
+        "Length": 12,
+        "data": {
+          "L1_voltage": { "offset": 0, "format": "decode_16bit_uint", "size": 1 },
+          "L2_voltage": { "offset": 1, "format": "decode_16bit_uint", "size": 1 },
+          "L3_voltage": { "offset": 2, "format": "decode_16bit_uint", "size": 1 },
+          "acfreq": { "offset": 3, "format": "decode_16bit_uint", "size": 1 },
+          "total_power": { "offset": 4, "format": "decode_32bit_uint", "size": 2, "note": "Active Power (W)" },
+          "apparent_power": { "offset": 6, "format": "decode_32bit_uint", "size": 2, "note": "Apparent Power (VA)" },
+          "reactive_power": { "offset": 8, "format": "decode_32bit_uint", "size": 2, "note": "Reactive Power (VAR)" },
+          "total_energy": { "offset": 10, "format": "decode_32bit_uint", "size": 2, "note": "Cumulative Energy", "m_f" : 0.001 }
+        }
+      }
+    
+  }
+}

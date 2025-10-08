@@ -1,0 +1,14 @@
+{
+    "setpoints":
+        [{
+            "device_id": "41",
+            "param":"active_power",
+            "value" : "0"
+   },
+   {
+            "device_id": "42",
+            "param":"active_power",
+            "value" : "500"   
+   }]
+        
+}

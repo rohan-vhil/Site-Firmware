@@ -23,6 +23,60 @@
                 "baudrate":"9600",
                 "slave_id":"1"
             }   
+        },
+        {
+            "device_type":"meter",
+            "device_brand":"webdyn",
+            "part_num":"wms_1",
+            "device_id":"wms:webdyn:2212514",
+            "device_serial_no":"2412843",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"wms_1",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"11"
+            }   
+        },
+        {
+            "device_type":"meter",
+            "device_brand":"webdyn",
+            "part_num":"wms_2",
+            "device_id":"wms:webdyn:17820",
+            "device_serial_no":"2412843",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"wms_2",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"20"
+            }   
+        },
+        {
+            "device_type":"meter",
+            "device_brand":"Schneider",
+            "part_num":"EM6400NG",
+            "device_id":"HT:EM6400NG:X2359408",
+            "device_serial_no":"X2359408",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"EM",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"E",
+                "baudrate":"9600",
+                "slave_id":"35"
+            }   
         }
     ]
 }

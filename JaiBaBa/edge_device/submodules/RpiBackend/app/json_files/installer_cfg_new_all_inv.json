@@ -1,6 +1,6 @@
 {
     "installer": "Rohan",
-    "number_of_devices": 12,
+    "number_of_devices": 15,
     "VPP ID": 255,
     "site id": "JAI BABA",
     "timezone":"Asia/Kolkata",
@@ -22,6 +22,24 @@
                 "parity":"N",
                 "baudrate":"9600",
                 "slave_id":"1"
+            }   
+        },
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"Kehua",
+            "part_num":"SP1250K-B-H",
+            "device_id":"solar-inverter:SPI250K-B-H:501501078430m9100014",
+            "device_serial_no":"1822060242250044",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"SP1250K-B-H",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"2"
             }   
         },
         {
@@ -58,6 +76,42 @@
                 "parity":"N",
                 "baudrate":"9600",
                 "slave_id":"4"
+            }   
+        },
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"Kehua",
+            "part_num":"SP1250K-B-H",
+            "device_id":"solar-inverter:SPI250K-B-H:501501078430M9100010",
+            "device_serial_no":"1822060242250044",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"SP1250K-B-H",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"5"
+            }   
+        },
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"Kehua",
+            "part_num":"SP1250K-B-H",
+            "device_id":"solar-inverter:SPI250K-B-H:501501078430M9100004",
+            "device_serial_no":"1822060242250044",
+            "comm_type": "modbus-rtu",
+            "num_phases":"3",
+            "phases":"1,2,3",
+            "modbus_rtu_details":{  
+                "part_num":"SP1250K-B-H",
+                "port":"/dev/ttyUSB0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"6"
             }   
         },
         {

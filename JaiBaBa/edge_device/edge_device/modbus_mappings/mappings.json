@@ -2,7 +2,7 @@
     "SG320HX":{
         "block1":{
             "byteorder": "BIG",
-            "wordorder": "BIG",
+            "wordorder": "LITTLE",
             "registers": "ir",
             "start_address": 5000,
             "Length": 50,
@@ -49,15 +49,23 @@
                     "format":"decode_32bit_int",
                     "s_f":"NA",
                     "m_f":"NA"
-                },
+                }
+            }
+        },
+        "block2":{
+            "byteorder": "LITTLE",
+            "wordorder": "LITTLE",
+            "registers": "ir",
+            "start_address": 5003,
+            "Length": 4,
+            "data":{
                 "total_energy": {
                     "size": 2,
-                    "offset": 3,
+                    "offset": 0,
                     "format": "decode_32bit_uint",
                     "s_f": "NA",
                     "m_f": "NA"
                 }
-                
             }
         }
     },
@@ -74,7 +82,7 @@
                     "offset":0,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
-                    "m_f":"NA"
+                    "m_f":10
                 },
                 "reactive_power":{
                     "size":1,
@@ -103,13 +111,6 @@
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
                     "m_f":0.1
-                },
-                "total_energy": {
-                    "size": 2,
-                    "offset": 3,
-                    "format": "decode_32bit_uint",
-                    "s_f": "NA",
-                    "m_f": "NA"
                 }
                 
             }

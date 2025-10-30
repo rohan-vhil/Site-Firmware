@@ -119,16 +119,9 @@
             "start_address": 1100,
             "Length": 3,
             "data":{
-                "today_energy": {
-                    "size": 1,
-                    "offset": 0,
-                    "format": "decode_16bit_uint",
-                    "s_f": "NA",
-                    "m_f": 0.1
-                },
                 "total_energy":{
                     "size":2,
-                    "offset":1,
+                    "offset":0,
                     "format":"decode_32bit_uint",
                     "s_f":"NA",
                     "m_f":"NA"
@@ -228,33 +221,33 @@
             "byteorder": "BIG",
             "wordorder": "BIG",
             "registers": "hr",
-            "start_address": 0,
-            "Length": 10,
+            "start_address": 2,
+            "Length": 30,
             "data":{
                 "ambient_temperature":{
                     "size":1,
-                    "offset":2,
+                    "offset":0,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
                     "m_f":"NA"
                 },
                 "humidity":{
                     "size":1,
-                    "offset":3,
+                    "offset":1,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
-                    "m_f":0.1
+                    "m_f":"NA"
                 },
                 "global_horizontal_irradiance":{
                     "size":1,
-                    "offset":4,
+                    "offset":2,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
                     "m_f":"NA"
                 },
                 "global_tilt_irradiance":{
                     "size":1,
-                    "offset":8,
+                    "offset":6,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
                     "m_f":"NA"
@@ -268,14 +261,14 @@
             "wordorder": "BIG",
             "registers": "hr",
             "start_address": 0,
-            "Length": 10,
+            "Length": 30,
             "data":{
                 "module_temperature":{
                     "size":1,
                     "offset":6,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
-                    "m_f":0.1
+                    "m_f":"NA"
                 },
                 "wind_speed":{
                     "size":1,

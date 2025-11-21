@@ -1,0 +1,181 @@
+{
+    "SG320HX":{
+        "Fault":{
+            "type":"code",
+            "codes":{
+                "2|3|14|15": {
+                    "fault_message": "Grid Overvoltage",
+                    "severity": "High"
+                },
+                "4|5": {
+                    "fault_message": "Grid Undervoltage",
+                    "severity": "High"
+                },
+                "8": {
+                    "fault_message": "Grid Overfrequency",
+                    "severity": "High"
+                },
+                "9": {
+                    "fault_message": "Grid Underfrequency",
+                    "severity": "High"
+                },
+                "10": {
+                    "fault_message": "Grid Power Outage",
+                    "severity": "High"
+                },
+                "12": {
+                    "fault_message": "Excess Leakage Current",
+                    "severity": "High"
+                },
+                "13": {
+                    "fault_message": "Grid Abnormal",
+                    "severity": "High"
+                },
+                "17": {
+                    "fault_message": "Grid Voltage Imbalance",
+                    "severity": "High"
+                },
+                "28|29|208|448-479|532-547|564-579": {
+                    "fault_message": "PV Reverse Connection Fault",
+                    "severity": "High"
+                },
+                "548-563|580-595": {
+                    "fault_message": "PV Abnormal Alarm",
+                    "severity": "High"
+                },
+                "37": {
+                    "fault_message": "Excessively High Ambient Temperature",
+                    "severity": "High"
+                },
+                "43": {
+                    "fault_message": "Excessively Low Ambient Temperature",
+                    "severity": "High"
+                },
+                "39": {
+                    "fault_message": "Low System Insulation Resistance",
+                    "severity": "High"
+                },
+                "106": {
+                    "fault_message": "Grounding Cable Fault",
+                    "severity": "High"
+                },
+                "88": {
+                    "fault_message": "Electric Arc Fault",
+                    "severity": "High"
+                },
+                "84": {
+                    "fault_message": "Reverse Connection Alarm of the Meter/CT",
+                    "severity": "High"
+                },
+                "514": {
+                    "fault_message": "Meter Communication Abnormal Alarm",
+                    "severity": "High"
+                },
+                "323": {
+                    "fault_message": "Grid Confrontation",
+                    "severity": "High"
+                },
+                "75": {
+                    "fault_message": "Inverter Parallel Communication Alarm",
+                    "severity": "High"
+                },
+                "264-283": {
+                    "fault_message": "MPPT Reverse Connection",
+                    "severity": "High"
+                },
+                "332-363": {
+                    "fault_message": "Boost Capacitor Overvoltage Alarm",
+                    "severity": "High"
+                },
+                "364-395": {
+                    "fault_message": "Boost Capacitor Overvoltage Fault",
+                    "severity": "High"
+                },
+                "1548-1579": {
+                    "fault_message": "String Current Reflux",
+                    "severity": "High"
+                },
+                "1600-1611": {
+                    "fault_message": "PV Grounding Fault",
+                    "severity": "High"
+                },
+                "1616": {
+                    "fault_message": "System Hardware Fault",
+                    "severity": "High"
+                }
+            }
+        }
+    },
+    "SPI250": {
+        "Fault": {
+            "type": "bitfield",
+            "codes": {
+                "0": {
+                    "fault_message": "None",
+                    "severity": "Info"
+                },
+                "1": {
+                    "fault_message": "None",
+                    "severity": "Info"
+                },
+                "2": {
+                    "fault_message": "None",
+                    "severity": "Info"
+                },
+                "3": {
+                    "fault_message": "Inverter Warning",
+                    "severity": "Low"
+                },
+                "4": {
+                    "fault_message": "Inverter Fault",
+                    "severity": "Medium"
+                },
+                "5": {
+                    "fault_message": "Dispatching Power",
+                    "severity": "Medium"
+                },
+                "6": {
+                    "fault_message": "PV Abnormal",
+                    "severity": "High"
+                },
+                "7": {
+                    "fault_message": "Grid Abnormal",
+                    "severity": "Medium"
+                },
+                "8": {
+                    "fault_message": "PV Insulation Resistance Abnormal",
+                    "severity": "High"
+                },
+                "9": {
+                    "fault_message": "Internal Communication Failure",
+                    "severity": "Low"
+                },
+                "10": {
+                    "fault_message": "Over Temperature",
+                    "severity": "High"
+                },
+                "11": {
+                    "fault_message": "Over Temperature Running" ,
+                    "severity": "High"
+                },
+                "12": {
+                    "fault_message": "DC SPD Failure",
+                    "severity": "High"
+                },
+                "13": {
+                    "fault_message": "AC SPD Failure",
+                    "severity": "High"
+                },
+                "14": {
+                    "fault_message": "AC Voltage Abnormal",
+                    "severity": "High"
+                },
+                "15": {
+                    "fault_message": "AC Frequency Abnormal",
+                    "severity": "High"
+                }
+            }
+        }
+    }
+}
+

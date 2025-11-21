@@ -1,0 +1,6 @@
+[Unit]
+Description=hotspot timer
+[Timer]
+OnBootSec=1min
+[Install]
+WantedBy=timers.target

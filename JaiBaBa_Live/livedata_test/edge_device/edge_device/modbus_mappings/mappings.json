@@ -62,6 +62,13 @@
                     "format":"decode_32bit_int",
                     "s_f":"NA",
                     "m_f":"NA"
+                },
+                "fault":{
+                    "size":1,
+                    "offset":42,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":"NA"
                 }
             }
         },
@@ -236,62 +243,6 @@
                 "string24_current":{
                     "size":1,
                     "offset":23,
-                    "format":"decode_16bit_uint",
-                    "s_f":"NA",
-                    "m_f":0.01
-                },
-                "string25_current":{
-                    "size":1,
-                    "offset":24,
-                    "format":"decode_16bit_uint",
-                    "s_f":"NA",
-                    "m_f":0.01
-                },
-                "string26_current":{
-                    "size":1,
-                    "offset":25,
-                    "format":"decode_16bit_uint",
-                    "s_f":"NA",
-                    "m_f":0.01
-                },
-                "string27_current":{
-                    "size":1,
-                    "offset":26,
-                    "format":"decode_16bit_uint",
-                    "s_f":"NA",
-                    "m_f":0.01
-                },
-                "string28_current":{
-                    "size":1,
-                    "offset":27,
-                    "format":"decode_16bit_uint",
-                    "s_f":"NA",
-                    "m_f":0.01
-                },
-                "string29_current":{
-                    "size":1,
-                    "offset":28,
-                    "format":"decode_16bit_uint",
-                    "s_f":"NA",
-                    "m_f":0.01
-                },
-                "string30_current":{
-                    "size":1,
-                    "offset":29,
-                    "format":"decode_16bit_uint",
-                    "s_f":"NA",
-                    "m_f":0.01
-                },
-                "string31_current":{
-                    "size":1,
-                    "offset":30,
-                    "format":"decode_16bit_uint",
-                    "s_f":"NA",
-                    "m_f":0.01
-                },
-                "string32_current":{
-                    "size":1,
-                    "offset":31,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
                     "m_f":0.01
@@ -857,6 +808,23 @@
                     "m_f":0.1
                 }
             }
+        },
+        "block5":{
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "registers": "ir",
+            "start_address": 2010,
+            "Length": 4,
+            "data":{
+                "fault": {
+                    "size": 1,
+                    "offset": 0,
+                    "format": "decode_16bit_uint",
+                    "s_f": "NA",
+                    "m_f": "NA"
+                }
+                
+            }
         }
     },
     "SP1250K-B-H":{
@@ -924,24 +892,6 @@
                     "m_f":"NA"
                 }
                 
-            }
-        }
-    },
-    "EM6400NG":{
-        "block1":{
-            "byteorder": "BIG",
-            "wordorder": "LITTLE",
-            "registers": "hr",
-            "start_address": 2999,
-            "Length": 70,
-            "data":{
-                "total_power":{
-                    "size":2,
-                    "offset":59,
-                    "format":"decode_32bit_float",
-                    "s_f":"NA",
-                    "m_f":1000
-                }
             }
         }
     },
@@ -1013,6 +963,76 @@
                     "s_f":"NA",
                     "m_f":"NA"
                 }
+            }
+        }
+    },
+    "Elite_440":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "registers": "hr",
+            "start_address": 147,
+            "Length": 4,
+            "data":{
+                "total_power":{
+                    "size":2,
+                    "offset":0,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":1000
+                }
+            }
+        },
+        "block2":{
+            "byteorder": "BIG",
+            "wordorder": "LITTLE",
+            "registers": "hr",
+            "start_address": 201,
+            "Length": 4,
+            "data":{
+                "total_energy":{
+                    "size":2,
+                    "offset":0,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":1000
+                }
+            }
+        }
+    },
+    "EM6400NG":{
+        "block1":{
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "registers": "hr",
+            "start_address": 2999,
+            "Length": 80,
+            "data":{
+                "total_power":{
+                    "size":2,
+                    "offset":60,
+                    "format":"decode_32bit_float",
+                    "s_f":"NA",
+                    "m_f":1000
+                }
+                
+            }
+        },
+        "block2":{
+            "byteorder": "BIG",
+            "wordorder": "BIG",
+            "registers": "hr",
+            "start_address": 3207,
+            "Length": 8,
+            "data":{
+                "total_energy":{
+                    "size":4,
+                    "offset":0,
+                    "format":"decode_64bit_uint",
+                    "s_f":"NA",
+                    "m_f":0.001
+                }
+                
             }
         }
     },

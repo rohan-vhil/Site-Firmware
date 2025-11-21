@@ -594,6 +594,118 @@
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
                     "m_f":0.1
+                },
+                "string1_voltage":{
+                    "size":1,
+                    "offset":2487,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "string2_voltage":{
+                    "size":1,
+                    "offset":2488,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "string3_voltage":{
+                    "size":1,
+                    "offset":2489,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "string4_voltage":{
+                    "size":1,
+                    "offset":2490,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "string5_voltage":{
+                    "size":1,
+                    "offset":2491,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "string6_voltage":{
+                    "size":1,
+                    "offset":2492,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "string7_voltage":{
+                    "size":1,
+                    "offset":2493,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "string8_voltage":{
+                    "size":1,
+                    "offset":2494,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "string9_voltage":{
+                    "size":1,
+                    "offset":2495,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "string10_voltage":{
+                    "size":1,
+                    "offset":2496,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "string11_voltage":{
+                    "size":1,
+                    "offset":2497,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "string12_voltage":{
+                    "size":1,
+                    "offset":2498,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "string13_voltage":{
+                    "size":1,
+                    "offset":2499,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "string14_voltage":{
+                    "size":1,
+                    "offset":2500,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "string15_voltage":{
+                    "size":1,
+                    "offset":2501,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
+                },
+                "string16_voltage":{
+                    "size":1,
+                    "offset":2502,
+                    "format":"decode_16bit_uint",
+                    "s_f":"NA",
+                    "m_f":1
                 }
             }
         },
@@ -602,7 +714,7 @@
             "wordorder": "BIG",
             "registers": "ir",
             "start_address": 1046,
-            "Length": 50,
+            "Length": 60,
             "data":{
                 "mppt1_voltage":{
                     "size":1,
@@ -693,84 +805,84 @@
                     "offset":16,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
-                    "m_f":0.01
+                    "m_f":10
                 },
                 "mppt2_power":{
                     "size":1,
                     "offset":17,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
-                    "m_f":0.01
+                    "m_f":10
                 },
                 "mppt3_power":{
                     "size":1,
                     "offset":18,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
-                    "m_f":0.01
+                    "m_f":10
                 },
                 "mppt4_power":{
                     "size":1,
                     "offset":19,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
-                    "m_f":0.01
+                    "m_f":10
                 },
                 "mppt5_power":{
                     "size":1,
                     "offset":20,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
-                    "m_f":0.01
+                    "m_f":10
                 },
                 "mppt6_power":{
                     "size":1,
                     "offset":21,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
-                    "m_f":0.01
+                    "m_f":10
                 },
                 "mppt7_power":{
                     "size":1,
                     "offset":22,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
-                    "m_f":0.01
+                    "m_f":10
                 },
                 "mppt8_power":{
                     "size":1,
                     "offset":23,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
-                    "m_f":0.01
+                    "m_f":10
                 },
                 "mppt9_power":{
                     "size":1,
                     "offset":24,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
-                    "m_f":0.01
+                    "m_f":10
                 },
                 "mppt10_power":{
                     "size":1,
                     "offset":25,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
-                    "m_f":0.01
+                    "m_f":10
                 },
                 "mppt11_power":{
                     "size":1,
                     "offset":26,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
-                    "m_f":0.01
+                    "m_f":10
                 },
                 "mppt12_power":{
                     "size":1,
                     "offset":27,
                     "format":"decode_16bit_uint",
                     "s_f":"NA",
-                    "m_f":0.01
+                    "m_f":10
                 },
                 "mppt1_current":{
                     "size":1,

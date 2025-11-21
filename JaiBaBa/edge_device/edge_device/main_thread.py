@@ -9,17 +9,21 @@ import path_config
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-#from io_master import iomasterapi as io
 from mqtt_master import subscribe
+from getmac import get_mac_address as gma
+
+# Import the FaultProcessor from your fault reporting script
+from fault_reporting import FaultProcessor
+# NEW: Import the DeviceStatusReporter for online/offline status reporting
+#from device_status_reporter import DeviceStatusReporter
+from mqtt_master import subscribe
+from mqtt_master import livedata
 
 install_file : bool = False
 send_project_details : bool = False
 logger_enrolled : bool = False
 import sys
 sys.path.insert(0,'../submodules')
-#from submodules.flask_app import app
-#from submodules.RpiBackend.app import main as localserv
-from getmac import get_mac_address as gma
 
 def getAddrMapFromPartNum(part,addr_map : dict,ctrl_map:dict={}):
     
@@ -50,7 +54,6 @@ def readDeviceList():
             try:
                 with open(project_device_path) as project_device_path_file:
                     project_cfg = json.load(project_device_path_file)
-                #project_file = {'document' : open(project_device_path,'rb')}
                 url = "https://app.enercog.com//ui/customer/project/create-project-device"
                 session = requests.Session()
                 retries = Retry(
@@ -72,12 +75,9 @@ def readDeviceList():
             except Exception as e:
                 print(f"Unexpected error: {e}")
 
-#
     with open(install_file_path) as installer_file:
         installer_cfg = json.load(installer_file)
-    #ctrl.vpp_id = installer_cfg['VPP ID']
     ctrl.site_id = installer_cfg["site id"]
-    #ctrl.mqtt_ip = installer_cfg['mqtt server']
     ctrl.controller_id = str(gma())
 
     global number_of_devices
@@ -86,7 +86,6 @@ def readDeviceList():
     i=-1
     for device in installer_cfg["device_list"]:
         i+=1
-        #ctrl.device_list.append(ctrl.systemDevice(ctrl.deviceType_l2e[device['device_type']],ctrl.commType_l2e[device['comm_type']]))
         for x in device:
             print(x)
             
@@ -111,14 +110,6 @@ def readDeviceList():
             scales={}
             ctrl.device_list.append(mbus.modbusTCPDevice(devicetype, ctrl.commType.modbus_tcp,ip,port=eval(tcp_details['port']),slave_id=slave_id,address_map=read_map,ctrl_map=ctrl_map,cfg=device))
             
-            #ctrl.device_list[-power = device['rated_power']
-            #ctrl.device_list.append(mbus.modbusTCPDevice(devicetype, ctrl.commType.modbus_tcp,ip,port=prt,address_map=addr_map))
-            #auto_cfg.createSunsAddrMap(ctrl.device_list[-1].mbus_client,ctrl.device_list[-1].)
-            #modbus_tcp_device_list.append(device)
-            #print(device)
-            #tcp_details = device['modbus-tcp_details']
-            #mbus.init_device(mbus.partNumberToddressMap(tcp_details['part_num']),mbus.power_direction.out,tcp_details['IP'],tcp_details['port'] )
-
         elif(device['comm_type'] == 'modbus-rtu'):
             devicetype = ctrl.deviceType_l2e[device['device_type']]
             rtu_details = device['modbus_rtu_details']
@@ -130,21 +121,13 @@ def readDeviceList():
             read_map = {}
             ctrl_map = {}
             
-
             getAddrMapFromPartNum(device["part_num"],read_map,ctrl_map)
-            #addr_map = mbus.partNumberToddressMap(rtu_details['part_num'])
             scales={}
             ctrl.device_list.append(mbus.modbusRTUDevice(devicetype,ctrl.commType.modbus_rtu,read_map,ctrl_map,port,parity,stop_bits,baud,slave_id,cfg=device))
             
-
         elif(device['comm_type'] == 'none'):
             ctrl.device_list.append(ctrl.systemDevice(devicetype=ctrl.deviceType.DG,commtype=ctrl.commType.none))
 
-            #print(addr_map)
-            #print(scales)
-            #addr_ref = auto_cfg.checkPartNumModbus(ctrl.device_list[-1].mbus_client,part_num=rtu_details['part_num'])
-            #print(addr_ref)
-            #auto_cfg.createSunsAddrMap(ctrl.device_list[-1].mbus_client,ctrl.device_list[-1].modbusRTU_comm_details.address_map,addr_ref[1])
         ctrl.device_list[-1].device_id = device_id
         ctrl.device_list[-1].num_phases = num_phases
         ctrl.device_list[-1].createMeasureRegisterMap()
@@ -168,7 +151,6 @@ def readDeviceList():
         status_cfg = json.load(status_file)
         print("site create : ",status_cfg["site_created"])
         if(not eval(status_cfg["site_created"])):
-            #create site
             with open(site_device_path) as site_device_file:
                 site_device_cfg = json.load(site_device_file)
                 try:
@@ -188,7 +170,6 @@ def getData():
 
     while( not os.path.exists(path_config.path_cfg.base_path + "devices.json")):
         install_file = False
-            #print("no file")
         pass
     install_file = True
 
@@ -201,28 +182,22 @@ def getData():
             try:
                 if(device.comm_type == ctrl.commType.modbus_tcp or device.comm_type == ctrl.commType.modbus_rtu):
                     device.decodeData(mbus.getModbusData(device))
-            #    elif(device.comm_type == ctrl.commType.gpio):
-            #        io.ioDevice.decodeIOData()
 
             except Exception as e:
                 pass
                 print(e)
 
-                
-
-        
         rpthndler.data_handler.aggData(ctrl.getAllData())
-#        ctrl.runSysControlLoop()
-#        rpthndler.data_handler.runDataLoop()
+        if(ctrl.system_operating_details.live_data):
+            print("live_data_timer",ctrl.system_operating_details.live_data_timer)
+            if(ctrl.system_operating_details.live_data_timer <= 0):
+                ctrl.system_operating_details.live_data = False
+            ctrl.system_operating_details.live_data_timer -= 1
+            
+            livedata.livdataHandler(ctrl.getLivePower())
         time.sleep(read_period)
 
-#print("run the file")
-
 def triggerThreads():
-    #t1 = threading.Thread(target=getData)
-    #t2 = theading.Thread(target=rpthndler.data_handler.runDataLoop)
-    #t1.start()
-    #t2.start()
     global install_file
     install_file = False
 
@@ -232,26 +207,42 @@ if __name__ == "__main__":
     path_config.path_cfg = path_config.pathConfig()
 
     while(not install_file):
+        print("waiting for install file..")
         readDeviceList()
-        pass
-
+        time.sleep(1) 
 
     rpthndler.data_handler = rpthndler.dataBank()
 
-        
-    #getData()
+    error_codes_path = os.path.join(path_config.path_cfg.base_path, 'modbus_mappings', 'error_codes.json')
+    fault_processor = FaultProcessor(error_codes_path=error_codes_path, poll_interval=10)
+    
+    # NEW: Instantiate the Device Status Reporter
+    #status_reporter = DeviceStatusReporter(poll_interval=60) # Checks every 60 seconds
+
+    # Define all threads
     t1 = threading.Thread(target=getData)
     t2 = threading.Thread(target=rpthndler.data_handler.runDataLoop)
-    #tmqtt = threading.Thread(target=subscribe.start_subscriber)
-    #t3 = threading.Thread(target=localserv.runThread)
+    t3 = threading.Thread(target=fault_processor.run)
+    tmqtt = threading.Thread(target=subscribe.start_subscriber)
+    # NEW: Define the thread for device status reporting
+    #t4 = threading.Thread(target=status_reporter.run)
 
+    # Start all threads
     t1.start()
     t2.start()
-    #tmqtt.start()
-    #t3.start()
+    t3.start()
+    tmqtt.start()
+    # NEW: Start the new thread
+    #t4.start()
 
+    print("All threads started: Data Acquisition, Report Handling, Fault Processing, and Device Status Reporting.")
+
+    # Join all threads to keep the main script alive
     t1.join()
     t2.join()
-    #tmqtt.join()
-    #t3.join()
-    print("thread started")
+    t3.join()
+    tmqtt.join()
+    # NEW: Join the new thread
+    #t4.join()
+    
+    print("All threads have completed.")

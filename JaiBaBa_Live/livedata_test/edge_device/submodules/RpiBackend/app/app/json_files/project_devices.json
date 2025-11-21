@@ -1,0 +1,38 @@
+[
+  {
+    "project_code": "Afpro",
+    "client_code": "Afpro",
+    "device_id": "solar-inverter:MAC_60KTL:EGKME1Q00Y",
+    "device_type": "solar-inverter",
+    "device_brand": "growatt",
+    "device_model_no": "MAC_60KTL",
+    "device_serial_no": "EGKME1Q00Y"
+  },
+  {
+    "project_code": "Afpro",
+    "client_code": "variate",
+    "device_id": "solar-inverter:MAC_60KTL:EGKME1Q00Y",
+    "device_type": "solar-inverter",
+    "device_brand": "growatt",
+    "device_model_no": "MAC_60KTL",
+    "device_serial_no": "EGKME1Q00Y"
+  },
+  {
+    "project_code": "Afpro",
+    "client_code": "Afpro",
+    "device_id": "meter:EM6436H:420217381",
+    "device_type": "solar-inverter",
+    "device_brand": "schneider",
+    "device_model_no": "EM6436H",
+    "device_serial_no": "420217381"
+  },
+  {
+    "project_code": "Afpro",
+    "client_code": "variate",
+    "device_id": "meter:EM6436H:420217381",
+    "device_type": "meter",
+    "device_brand": "schneider",
+    "device_model_no": "EM6436H",
+    "device_serial_no": "420217381"
+  }
+]

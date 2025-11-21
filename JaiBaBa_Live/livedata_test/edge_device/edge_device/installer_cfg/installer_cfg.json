@@ -1,0 +1,55 @@
+{
+    "installer": "Harshal",
+    "number_of_devices": 1,
+    "VPP ID": 255,
+    "site id": "royalgrande",
+    "timezone":"Asia/Kolkata",
+    "mqtt server": "test.mqtt.org",
+    "device_list": [
+        {
+            "device_type":"solar-inverter",
+            "device_brand":"polycab",
+            "part_num":"polycab",
+            "device_id":"solar-inverter:polycab:123abc",
+            "device_serial_no":"123abc",
+            "comm_type": "modbus-rtu",
+            "num_phases":3,
+            "phase":"all",
+            "connected_to" : "grid",
+            "modbus-tcp_details":{  
+                "IP":"192.168.159.182",
+                "port":"502"
+            },
+            "modbus-rtu_details": {
+                "part_num": "EMG6436N",
+                "port": "/dev/ttyUSB0",
+                "stop_bits": "1",
+                "parity": "E",
+                "baudrate": "9600",
+                "slave_id": "3"
+            }
+        },
+
+        {
+            "device_type":"meter",
+            "comm_type":"modbus-rtu",
+            "part_num":"MFM376",
+            "device ID":1,
+            "num_phases":1,
+            "phase":"all",
+            "modbus-tcp_details":{
+                "IP":"10.42.0.71",
+                "port":"502"
+            },
+            "modbus-rtu_details":{
+                "part_num":"polycab",
+                "port":"/dev/serial/by-id/usb-FTDI_FT232R_USB_UART_B0047HS5-if00-port0",
+                "stop_bits":"1",
+                "parity":"N",
+                "baudrate":"9600",
+                "slave_id":"1"
+            }
+        }
+
+    ]
+}

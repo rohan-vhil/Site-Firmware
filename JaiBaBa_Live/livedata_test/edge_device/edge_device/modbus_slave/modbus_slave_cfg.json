@@ -1,0 +1,14 @@
+{
+    "type" : "tcp",
+    "tcp_details" : {
+        "ip" :"0.0.0.0",
+        "port" : 502
+    },
+    "rtu_details":{
+        "port" :"",
+        "baud" : 9600,
+        "parity" : "N",
+        "slave_id" : 1
+    }
+
+}
